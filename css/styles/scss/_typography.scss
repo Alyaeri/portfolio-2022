@@ -1,0 +1,44 @@
+
+h1{
+    font-size: $font-size-h1;
+    font-family: $font-family-h1;
+    color: $font-color-h1;
+    text-transform: uppercase;
+   letter-spacing: 2px;
+}
+
+h2{
+    font-size: $font-size-h2;
+    font-family: $font-family-h2;
+    color: $font-color-h2;
+}
+
+h3{
+    font-size: $font-size-h3;
+    font-family: $font-family-h3;
+    color: $font-color-h3;
+}
+
+h4{
+    font-size: $font-size-h4;
+    font-family: $font-family-h4;
+    color: $font-color-h4;
+}
+
+h5{
+    font-size: $font-size-h5;
+    font-family: $font-family-h5;
+    color: $font-color-h5;
+}
+
+body{
+    font-size: $font-size-body;
+    font-family: $font-family-body;
+    color: $font-color-body;
+}
+
+#nav{
+    li.active{
+        font-weight: bold;
+    }
+}

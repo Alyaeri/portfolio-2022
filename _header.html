@@ -1,0 +1,62 @@
+<script>
+      var anchors = $("#nav a").click(function() {
+
+        $(this).addClass("active")
+        anchors.not(this).removeClass("active")
+    });
+
+    $(function(){
+    var current = location.pathname;
+    $('#nav a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active');
+        }
+    })
+})
+
+function markActiveLink() {
+
+//Look through all the links in the sidebar
+$("#nav a").filter(function() {
+
+  //Take the current URL and split it into chunks at each slash
+  var currentURL = window.location.toString().split("/");
+
+  //return true if the bit after the last slash is the current page name
+  return $(this).attr("href") == currentURL[currentURL.length-1];
+
+//when the filter function is done, you're left with the links that match.
+}).addClass("active");
+
+//Afterwards, look back through the links. If none of them were marked,
+//mark your default one.
+if($("#nav a").hasClass("active") == false) {
+  $("#nav #btn-home").addClass("active");
+}
+}
+
+markActiveLink();
+
+</script>
+
+<header>
+    <div class="top">
+        <a class="scroll" id="logo" href="index.html">ELLE.</a>
+    </div>
+
+   <nav id="nav">
+        <a class="scroll" href="index.html#home" id="btn-home">HOME</a>
+        <a class="scroll" href="index.html#case-studies" >CASE STUDIES</a>
+        <a class="menu-sub" href="care-to-compare.html" id="btn-cs1">Care to Compare</a>
+        <a class="menu-sub" href="design-system.html" id="btn-cs2">Design system</a>
+        <a class="menu-sub" href="more-secure-authentication.html" id="btn-cs3">Authentication</a>
+        <a class="scroll" href="index.html#about">ABOUT</a>
+   </nav>
+
+   <div class="bottom">
+       <p>Made with ❤️ by me</p>
+   </div>
+</header>
+
