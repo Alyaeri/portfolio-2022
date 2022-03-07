@@ -1,0 +1,51 @@
+article{
+
+
+    &.feature,  &.quote{
+        background-color: $bkg-article-feature;
+        
+        h1, h2, h3, h4, h5, p, blockquote {
+            color: #FFFFFF;
+        }        
+    }
+
+    
+    &.quote{
+        .article-inner{
+            border-left: 4px solid $color-accent;
+           font-size: $font-size-h5;
+           font-weight: 400;
+        }
+    }
+
+    &.regular{
+
+        &:nth-of-type(odd){
+            background-color: $bkg-article-regular-1;
+        }
+
+        &:nth-of-type(even){
+            background-color: $bkg-article-regular-2;
+        }
+    }
+
+    &.image{
+        background-color: $bkg-article-regular-1;
+        padding: 0;
+        margin: 0;
+
+        &.full{
+            max-width: 100%;
+        }
+
+        &.half{
+            max-width: 50%;
+        }
+    }
+
+
+    .article-inner{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}

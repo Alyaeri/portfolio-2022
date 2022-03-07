@@ -1,32 +1,54 @@
 <script>
 
-$("a").on('click', function(event) {  
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-  
-        var hash = this.hash;
+  var addClassOnScroll = function () {
+    var windowTop = $(window).scrollTop();
+    $('article[id]').each(function (index, elem) {
+        var offsetTop = $(elem).offset().top;
+        var outerHeight = $(this).outerHeight(true);
 
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-          
-        }, 750, function() {
-        
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-        return false;
-      } // End if
+        if( windowTop > (offsetTop - 50) && windowTop < ( offsetTop + outerHeight)) {
+            var elemId = $(elem).attr('id'); //selects article id
+            $("#nav a.active").removeClass('active');
+            $("#nav a[href='index.html#" + elemId + "']").addClass('active');
+            
+        }
     });
+  };
+
+  $(function () {
+    $(window).on('scroll', function () {
+        addClassOnScroll();
+    });
+  });
     
-      var anchors = $("#nav a").click(function() {
+  $("a").on('click', function(event) {  
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
 
-        $(this).addClass("active")
-        anchors.not(this).removeClass("active")
-    });
+      var hash = this.hash;
 
-    $(function(){
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+        
+      }, 750, function() {
+      
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+      return false;
+    } // End if
+  });
+
+  
+  var anchors = $("#nav a").click(function() {
+
+      $(this).addClass("active")
+      anchors.not(this).removeClass("active")
+  });
+
+  $(function(){
     var current = location.pathname;
     $('#nav a').each(function(){
         var $this = $(this);
@@ -35,27 +57,27 @@ $("a").on('click', function(event) {
             $this.addClass('active');
         }
     })
-})
+  });
 
 function markActiveLink() {
 
-//Look through all the links in the sidebar
-$("#nav a").filter(function() {
+  //Look through all the links in the sidebar
+  $("#nav a").filter(function() {
 
-  //Take the current URL and split it into chunks at each slash
-  var currentURL = window.location.toString().split("/");
+    //Take the current URL and split it into chunks at each slash
+    var currentURL = window.location.toString().split("/");
 
-  //return true if the bit after the last slash is the current page name
-  return $(this).attr("href") == currentURL[currentURL.length-1];
+    //return true if the bit after the last slash is the current page name
+    return $(this).attr("href") == currentURL[currentURL.length-1];
 
-//when the filter function is done, you're left with the links that match.
-}).addClass("active");
+  //when the filter function is done, you're left with the links that match.
+  }).addClass("active");
 
-//Afterwards, look back through the links. If none of them were marked,
-//mark your default one.
-if($("#nav a").hasClass("active") == false) {
-  $("#nav #btn-home").addClass("active");
-}
+  //Afterwards, look back through the links. If none of them were marked,
+  //mark your default one.
+  if($("#nav a").hasClass("active") == false) {
+    $("#nav #btn-home").addClass("active");
+  }
 }
 
 markActiveLink();
@@ -64,16 +86,17 @@ markActiveLink();
 
 <header>
     <div class="top">
-        <a class="scroll" id="logo" href="index.html">ELLE.</a>
+        <a class="scroll" id="logo" href="index.html">TEXT.</a>
     </div>
 
    <nav id="nav">
-        <a class="scroll" href="index.html#home" id="btn-home">HOME</a>
-        <a class="scroll" href="index.html#case-studies" >CASE STUDIES</a>
+        <a class="scroll" href="index.html#home" id="btn-home">Home</a>
+        <a class="scroll" href="index.html#about" id="btn-about">About</a>
+        <a class="scroll" href="index.html#case-studies" id="btn-case-studies">Case studies</a>
         <a class="menu-sub" href="care-to-compare.html" id="btn-cs1">Care to Compare</a>
         <a class="menu-sub" href="design-system.html" id="btn-cs2">Design system</a>
         <a class="menu-sub" href="more-secure-authentication.html" id="btn-cs3">Authentication</a>
-        <a class="scroll" href="index.html#about">ABOUT</a>
+    
    </nav>
 
    <div class="bottom">

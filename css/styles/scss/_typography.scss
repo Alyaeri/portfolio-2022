@@ -5,6 +5,20 @@ h1{
     color: $font-color-h1;
     text-transform: uppercase;
    letter-spacing: 2px;
+   position: relative;
+
+   &:before {
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: 8px;
+    background-color: $color-accent;
+    transition: height 0.23s;
+    z-index: -1;
+}
+
 }
 
 h2{
@@ -35,10 +49,8 @@ body{
     font-size: $font-size-body;
     font-family: $font-family-body;
     color: $font-color-body;
-}
 
-#nav{
-    li.active{
-        font-weight: bold;
+    p{
+        margin: $spacing-m 0;
     }
 }

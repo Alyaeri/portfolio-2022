@@ -1,18 +1,18 @@
 // COLORS
 $bkg-header: #ffffff;
-$bkg-body: #ebebeb;
+$bkg-body: #f8f8f8;
 
-$color-accent: #ffc3b4;
+$color-accent: hsl(224, 72%, 65%);
 
-$layout-cols-header: calc((100vw/24) * 5);
-$layout-cols-body:  calc((100vw/24) * 15);
-$layout-cols-spacer:  calc((100vw/24) * 2);
+$layout-cols-header: calc((100vw/12) * 3);
+$layout-cols-body:  calc((100vw/12) * 9);
 
 $bkg-article-feature: #1e1e1e;
-$bkg-article-regular: #ffffff;
+$bkg-article-regular-1: #ffffff;
+$bkg-article-regular-2: #eeeeee;
 
 // TYPOGRAPHY 
-$scale: 1.275;
+$scale: 1.2;
 $font-size-body: 1rem;
 
 $font-size-h5: calc(#{$font-size-body} * #{$scale});
@@ -21,12 +21,14 @@ $font-size-h3: calc(#{$font-size-h4} * #{$scale});
 $font-size-h2: calc(#{$font-size-h3} * #{$scale});
 $font-size-h1: calc(#{$font-size-h2} * #{$scale});
 
-$font-family-h1: 'SFPortMcKenzie Bold', serif;
-$font-family-h2: 'Vollkorn', serif;
-$font-family-h3: 'Vollkorn', serif;
-$font-family-h4: 'Vollkorn', serif;
-$font-family-h5: 'Vollkorn', serif;
-$font-family-body: 'Commissioner', sans-serif;
+$font-family-h1: 'Montserrat', serif;
+$font-family-h2: 'Montserrat', serif;
+$font-family-h3: 'Montserrat', serif;
+$font-family-h4: 'Montserrat', serif;
+$font-family-h5: 'Montserrat', serif;
+$font-family-body: 'Open Sans', sans-serif;
+
+$font-family-menu: 'Montserrat', serif;
 
 $font-color-h1: #252B33;
 $font-color-h2: #252B33;
@@ -34,22 +36,14 @@ $font-color-h3: #252B33;
 $font-color-h4: #252B33;
 $font-color-h5: #252B33;
 $font-color-body: #252B33;
+$font-color-body-light: #767676;
 
 
-// PADDING
-$padding-l: 76px;
-$padding-m: 36px;
-$padding-s: 18px;
+// spacing
+$spacing-xl: 128px;
+$spacing-l: 64px;
+$spacing-m: 32px;
+$spacing-s: 16px;
+$spacing-xs: 8px;
 
-$padding-article: $padding-l $padding-m;
-
-
-@font-face {
-    font-family: 'SFPortMcKenzie Bold';
-    src: url(../../../fonts/SFPortMcKenzie/SFPortMcKenzie-Bold.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'SFPortMcKenzie Outline';
-    src: url(../../../fonts/SFPortMcKenzie/SFPortMcKenzieOutline.ttf) format('truetype');
-}
+$spacing-article: $spacing-l 140px;
