@@ -12,14 +12,16 @@ $bkg-article-regular-1: #ffffff;
 $bkg-article-regular-2: #eeeeee;
 
 // TYPOGRAPHY 
-$scale: 1.2;
+$scale: 1.15;
 $font-size-body: 1rem;
+$font-size-menu: calc(#{$font-size-body} / #{$scale});
+$font-size-overline: calc(#{$font-size-menu} / #{$scale});
 
 $font-size-h5: calc(#{$font-size-body} * #{$scale});
-$font-size-h4: calc(#{$font-size-h5} * #{$scale});
-$font-size-h3: calc(#{$font-size-h4} * #{$scale});
-$font-size-h2: calc(#{$font-size-h3} * #{$scale});
-$font-size-h1: calc(#{$font-size-h2} * #{$scale});
+$font-size-h4: calc(#{$font-size-body} * #{$scale});
+$font-size-h3: calc(#{$font-size-h4} * #{$scale} * #{$scale});
+$font-size-h2: calc(#{$font-size-h3} * #{$scale} * #{$scale} * #{$scale});
+$font-size-h1: calc(#{$font-size-h2} * #{$scale} * #{$scale} * #{$scale});
 
 $font-family-h1: 'Montserrat', serif;
 $font-family-h2: 'Montserrat', serif;
@@ -40,10 +42,10 @@ $font-color-body-light: #767676;
 
 
 // spacing
-$spacing-xl: 128px;
-$spacing-l: 64px;
-$spacing-m: 32px;
-$spacing-s: 16px;
-$spacing-xs: 8px;
+$spacing-xl: 8rem;
+$spacing-l: 4rem;
+$spacing-m: 2rem;
+$spacing-s: 1rem;
+$spacing-xs: 0.5rem;
 
-$spacing-article: $spacing-l 140px;
+$spacing-article: $spacing-l $spacing-l $spacing-xl $spacing-l;

@@ -1,51 +1,129 @@
-article{
+article {
+    padding: $spacing-article;
 
-
-    &.feature,  &.quote{
-        background-color: $bkg-article-feature;
-        
-        h1, h2, h3, h4, h5, p, blockquote {
-            color: #FFFFFF;
-        }        
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-top: $spacing-l;
     }
 
-    
-    &.quote{
-        .article-inner{
-            border-left: 4px solid $color-accent;
-           font-size: $font-size-h5;
-           font-weight: 400;
+    &.feature,
+    &.quote {
+        background-color: $bkg-article-feature;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p,
+        blockquote, mark {
+            color: #ffffff;
         }
     }
 
-    &.regular{
+    &.feature {
+        text-align: center;
+        .line-header {
+            width: 20%;
+            height: 4px;
+            background-color: $color-accent;
+            border: none;
+            margin: 0 auto $spacing-m auto;
+        }
+    }
 
-        &:nth-of-type(odd){
+    &.quote {
+        padding: $spacing-l;
+    }
+
+    &.regular {
+
+        &.regular-1 {
             background-color: $bkg-article-regular-1;
         }
-
-        &:nth-of-type(even){
+        &.regular-2 {
             background-color: $bkg-article-regular-2;
+        }
+
+      
+    }
+
+    &.tools {
+        padding: $spacing-m;
+
+        .article-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                height: 40px;
+            }
         }
     }
 
-    &.image{
+    &.image {
         background-color: $bkg-article-regular-1;
         padding: 0;
         margin: 0;
 
-        &.full{
-            max-width: 100%;
+        img {
+            display: block;
         }
 
-        &.half{
-            max-width: 50%;
+        &.full {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &.half {
+            img {
+                max-width: 50%;
+            }
         }
     }
 
-
-    .article-inner{
-        max-width: 600px;
+    .article-inner {
         margin: 0 auto;
+        max-width: 900px;
+
+        &.narrow,
+        .narrow {
+            max-width: 600px;
+
+            margin: 0 auto;
+        }
+        h1,
+        h2 {
+            text-transform: uppercase;
+        }
+
+        blockquote {
+            border-left: 4px solid $color-accent;
+            font-size: $font-size-h5;
+            font-weight: 400;
+            font-style: italic;
+            margin: 0;
+            padding: $spacing-xs $spacing-m;
+        }
+
+        .layout-insight{
+            background-color: white;
+            padding: $spacing-m;
+            margin-top: $spacing-m;
+            border-left:  4px solid $color-accent;
+
+            h4{
+             margin: $spacing-s 0 $spacing-xs 0;
+            }
+
+            p{
+                font-size: 80%;
+            
+            }
+        }
     }
 }

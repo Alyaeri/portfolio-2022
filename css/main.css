@@ -34,30 +34,79 @@ main {
   width: calc((100vw/12) * 9);
 }
 
-main article {
-  padding: 64px 140px;
+article {
+  padding: 4rem 4rem 8rem 4rem;
+}
+
+article h1,
+article h2,
+article h3,
+article h4 {
+  margin-top: 4rem;
 }
 
 article.feature, article.quote {
   background-color: #1e1e1e;
 }
 
-article.feature h1, article.feature h2, article.feature h3, article.feature h4, article.feature h5, article.feature p, article.feature blockquote, article.quote h1, article.quote h2, article.quote h3, article.quote h4, article.quote h5, article.quote p, article.quote blockquote {
-  color: #FFFFFF;
+article.feature h1,
+article.feature h2,
+article.feature h3,
+article.feature h4,
+article.feature h5,
+article.feature p,
+article.feature blockquote, article.feature mark, article.quote h1,
+article.quote h2,
+article.quote h3,
+article.quote h4,
+article.quote h5,
+article.quote p,
+article.quote blockquote, article.quote mark {
+  color: #ffffff;
 }
 
-article.quote .article-inner {
-  border-left: 4px solid #6588e6;
-  font-size: calc(1rem * 1.2);
-  font-weight: 400;
+article.feature {
+  text-align: center;
 }
 
-article.regular:nth-of-type(odd) {
+article.feature .line-header {
+  width: 20%;
+  height: 4px;
+  background-color: #6588e6;
+  border: none;
+  margin: 0 auto 2rem auto;
+}
+
+article.quote {
+  padding: 4rem;
+}
+
+article.regular.regular-1 {
   background-color: #ffffff;
 }
 
-article.regular:nth-of-type(even) {
+article.regular.regular-2 {
   background-color: #eeeeee;
+}
+
+article.tools {
+  padding: 2rem;
+}
+
+article.tools .article-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article.tools .article-inner img {
+  height: 40px;
 }
 
 article.image {
@@ -66,17 +115,56 @@ article.image {
   margin: 0;
 }
 
-article.image.full {
+article.image img {
+  display: block;
+}
+
+article.image.full img {
   max-width: 100%;
 }
 
-article.image.half {
+article.image.half img {
   max-width: 50%;
 }
 
 article .article-inner {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+article .article-inner.narrow,
+article .article-inner .narrow {
   max-width: 600px;
   margin: 0 auto;
+}
+
+article .article-inner h1,
+article .article-inner h2 {
+  text-transform: uppercase;
+}
+
+article .article-inner blockquote {
+  border-left: 4px solid #6588e6;
+  font-size: calc(1rem * 1.15);
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5rem 2rem;
+}
+
+article .article-inner .layout-insight {
+  background-color: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-left: 4px solid #6588e6;
+}
+
+article .article-inner .layout-insight h4 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+article .article-inner .layout-insight p {
+  font-size: 80%;
 }
 
 header {
@@ -94,6 +182,7 @@ header {
       -ms-flex-align: left;
           align-items: left;
   border-right: 1px solid #ebebeb;
+  font-size: calc(1rem / 1.15);
 }
 
 header div.bottom {
@@ -105,17 +194,21 @@ header div.bottom {
           align-items: flex-end;
 }
 
-header .top, header .bottom, header #nav {
-  padding: 32px 64px;
+header .top, header .bottom {
+  padding: 0 calc(0.5rem + 4rem);
 }
 
-header .top p, header .bottom p, header #nav p {
+header .top p,
+header .bottom p,
+header #nav p {
   margin: 0;
   color: #767676;
 }
 
-header .top #logo, header .bottom #logo, header #nav #logo {
-  font-size: calc(calc(calc(calc(1rem * 1.2) * 1.2) * 1.2) * 1.2);
+header .top #logo,
+header .bottom #logo,
+header #nav #logo {
+  font-size: calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   font-weight: 800;
   color: #252B33;
@@ -124,94 +217,70 @@ header .top #logo, header .bottom #logo, header #nav #logo {
 }
 
 header #nav {
+  padding: 2rem 4rem;
   text-align: left;
   font-family: "Montserrat", serif;
   font-weight: 100;
-  font-size: 1rem;
   margin: 0;
 }
 
 header #nav a {
   color: #767676;
   text-decoration: none;
-  margin: 8px 0;
+  margin: 0.25rem 0;
   position: relative;
   float: left;
   clear: both;
   font-weight: 400;
-}
-
-header #nav a:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: -4px;
-  width: calc(100% + 8px);
-  height: 0px;
-  background-color: #6588e6;
-  opacity: 0.6;
-  -webkit-transition: height 0.23s;
-  transition: height 0.23s;
-  z-index: -1;
+  padding: 0 4px;
 }
 
 header #nav a.active {
   font-weight: 600;
   color: #252B33;
-}
-
-header #nav a.active:before {
-  height: 8px;
+  background-color: rgba(101, 136, 230, 0.5);
 }
 
 header #nav a.menu-sub {
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 h1 {
-  font-size: calc(calc(calc(calc(calc(1rem * 1.2) * 1.2) * 1.2) * 1.2) * 1.2);
+  font-size: calc(calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   color: #252B33;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
-}
-
-h1:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: -4px;
-  width: calc(100% + 8px);
-  height: 8px;
-  background-color: #6588e6;
-  -webkit-transition: height 0.23s;
-  transition: height 0.23s;
-  z-index: -1;
+  margin: 2rem 0;
 }
 
 h2 {
-  font-size: calc(calc(calc(calc(1rem * 1.2) * 1.2) * 1.2) * 1.2);
+  font-size: calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   color: #252B33;
 }
 
 h3 {
-  font-size: calc(calc(calc(1rem * 1.2) * 1.2) * 1.2);
+  font-size: calc(calc(1rem * 1.15) * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   color: #252B33;
+  margin: 4rem 0 1rem 0;
 }
 
 h4 {
-  font-size: calc(calc(1rem * 1.2) * 1.2);
+  font-size: calc(1rem * 1.15);
   font-family: "Montserrat", serif;
   color: #252B33;
+  margin-bottom: 0.5rem;
 }
 
 h5 {
-  font-size: calc(1rem * 1.2);
+  font-size: calc(1rem * 1.15);
   font-family: "Montserrat", serif;
-  color: #252B33;
+  font-weight: 700;
+  color: red;
+  margin: 4rem 0 0.5rem;
 }
 
 body {
@@ -221,9 +290,23 @@ body {
 }
 
 body p {
-  margin: 32px 0;
+  margin: 1rem 0;
+}
+
+mark {
+  background-color: rgba(101, 136, 230, 0.5);
+  padding: 0 2px;
+}
+
+overline {
+  font-size: calc(calc(1rem / 1.15) / 1.15);
+  text-transform: uppercase;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  color: #767676;
 }
 
 html {
-  font-size: 100%;
+  font-size: 120%;
+  line-height: 1.5;
 }
