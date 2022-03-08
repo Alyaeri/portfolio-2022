@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/styles/flexboxgrid-6.3.1/css/flexboxgrid.css">
+
+
+
+    <!-- FONT IMPORTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Rachelle Patman | Senior UX / UI Designer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("_header.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main>
+        <article class="feature">
+            <div class="article-inner narrow">
+                <h1>A more convenient login</h1>
+                <hr class="line-header">
+                <p>Insurance is a begrudging purchase that is typically set and forget, until you need it most.
+                </p>
+                <p>
+                    In 2019 we looked to improve the security of our online self service platform by providing a more
+                    secure login system that didn’t punish infrequent users of the platform, while also eliminating a
+                    barrier to entry by removing the password requirement altogether.
+                </p>
+            </div>
+        </article>
+
+        <article class="regular tools regular-1 ">
+            <div class="article-inner narrow ">
+                <img src="images/case-studies/logos/analytics-google.svg">
+                <img src="images/case-studies/logos/adobexd.svg">
+                <img src="images/case-studies/logos/askable.svg">
+            </div>
+        </article>
+
+
+        <article class="image full">
+            <img src="https://dummyimage.com/1920x600/dddddd/000000">
+        </article>
+
+
+        <article class="regular regular-2">
+            <div class="article-inner narrow">
+                <h2>The Challenge</h2>
+                <p>
+                    Our goal for this project was to increase the number of successful logins through the online policy
+                    management platform by reducing barriers to entry. In turn, this would contribute to solving a
+                    business need by reducing the number of customers calling to make changes to their policy.
+                </p>
+
+                <h3>
+                    Scope and constraints
+                </h3>
+                <p>
+                    When we were handed this project some level of solutionising had already been completed, namely with
+                    the security and infrastructure teams to determine feasibility. The security team determined that
+                    SMS was the most secure method of sending a OTP (one-time pin), and as such that was the only method
+                    we would be proceeding with. This would become one of the most controversial decisions of the
+                    project.
+                </p>
+
+                <h3>
+                    My role
+                </h3>
+                <p>
+                    For this project I worked as a UX researcher during the research and discovery phase, as well as the
+                    UI designer for the prototypes and eventual implementation.
+                </p>
+            </div>
+
+        </article>
+
+
+
+        <article class="regular regular-1">
+            <div class="article-inner narrow">
+
+                <h2>The Approach</h2>
+
+                <p>
+                    At the outset of the project we didn’t have any existing insights into the current journey, so we
+                    were unable to form clear goals. Our first task was to understand how customers perceive the current
+                    journey, fortunately we have access to an abundance of data at our fingertips.
+                </p>
+
+                <img src="https://dummyimage.com/600x400/dddddd/000000">
+
+            </div>
+
+
+        </article>
+
+        <article class="regular regular-2">
+            <div class="article-inner narrow">
+
+
+                <h3>
+                    Early insights
+                </h3>
+                <p>
+                    I analyzed themes of data across many of our customer feedback platforms to form an early picture of
+                    our customers opinion of the current journey. From surveys, live chats, call recording, and contact
+                    forms we formed a picture of a login that according to our customers either “just works” or “never
+                    works”. Some common themes included:</p>
+
+                <ul>
+                    <li>Clunky password reset process</li>
+                    <li>Difficult to navigate and non responsive UI built without mobile in mind (which now makes up
+                        over 50% of our sales)</li>
+                </ul>
+
+                <p>
+                    We needed to dive deeper to understand why the login was smooth for some customers, and incredibly
+                    frustrating to other customers.
+                </p>
+            </div>
+        </article>
+
+
+        <article class="quote">
+            <div class="article-inner narrow">
+                <blockquote>
+                    “How might we make the login process easier so that existing customers can manage their policy
+                    online themselves?”
+                </blockquote>
+            </div>
+        </article>
+
+
+
+        <article class="regular regular-1">
+            <div class="article-inner narrow">
+                <h3>Defining success</h3>
+                <p>
+                    Given our challenge is to increase the number of successful logins, our definition of success for
+                    this project directly relates to this metric. OTPs are a relatively new way to login, so we
+                    understand there is an education piece within this project that would only be solved with time as
+                    users grow more familiar with the system. Therefore, our measures of success were:
+                </p>
+                <ol>
+                    <li>Increasing the number of successful logins to the online policy management platform</li>
+                    <li>Without greatly increasing the number of customers chatting or calling for assistance</li>
+                    <li>Determining the best time to disable the legacy email and password login</li>
+                    <li>Increasing the overall NPS of the login system</li>
+
+                </ol>
+            </div>
+
+        </article>
+
+        <article class="regular regular-2">
+            <div class="article-inner narrow">
+                <h3>How we tested</h3>
+                <p>
+                    A user research project typically calls for multiple rounds of testing to iterate over designs and
+                    validate changes. We knew early on that this project would require more complex iterative testing
+                    that would depend on our ability to capture and review data from our production environment before
+                    making changes.
+                </p>
+                <p>
+                    What we wanted to know:
+                </p>
+                <ol>
+                    <li>Can customers use the new login with SMS authentication?</li>
+                    <li>What would improve the new login experience?</li>
+                    <li>What barriers to entry could be identified? (no signal, phone dead, old phone number)</li>
+                </ol>
+
+
+                <img src="https://dummyimage.com/600x400/dddddd/000000">
+                <h4>
+                    Customer feedback analysis
+                </h4>
+                <p>
+                    To form a more in-depth picture of the current state I returned to analyzing feedback from existing
+                    customers. This time I dove deeper than just general themes and started to log specific reasons for
+                    customers failing to login.
+                </p>
+                <p>
+                    We quickly found that:
+                </p>
+
+
+
+                <div class="layout-insight">
+                    <overline>Data analysis Insight #1</overline>
+                    <p>The login is not optimized for mobile design (over 50% of our traffic)</p>
+                    <img src="https://dummyimage.com/500x200/dddddd/000000">
+                </div>
+                <div class="layout-insight">
+                    <overline>Data analysis Insight #2</overline>
+                    <p>The UI incorrectly implies that the email and password are correct, not just valid</p>
+                    <img src="https://dummyimage.com/500x200/dddddd/000000">
+                </div>
+                <div class="layout-insight">
+                    <overline>Data analysis Insight #3</overline>
+                    <p>The reset password email is not consistently received</p>
+                    <img src="https://dummyimage.com/500x200/dddddd/000000">
+                </div>
+                <div class="layout-insight">
+                    <overline>Data analysis Insight #4</overline>
+                    <p>Customers frequently got locked out of their account, but insist that their password was correct
+                        (because they always use the same one, or they wrote it down, which are major security risks)
+                    </p>
+                    <img src="https://dummyimage.com/500x200/dddddd/000000">
+                </div>
+                <div class="layout-insight">
+                    <overline>Data analysis Insight #5</overline>
+                    <p>Customers are unsure whether they have previously used social media logins, and if they need to
+                        again if they have previously</p>
+                    <img src="https://dummyimage.com/500x200/dddddd/000000">
+                </div>
+
+                <p>
+                    These findings alongside our defined scope and measures for success allowed us to move from the
+                    early insights and discovery phase into the prototyping and testing phase of the project.
+                </p>
+            </div>
+        </article>
+
+        <article class="regular regular-1">
+            <div class="article-inner narrow">
+                <h3>Informing a design</h3>
+
+                <p>
+                    Before jumping into design I spent some time reading existing customer research in the
+                    authentication space. I familarised myself with the common themes and findings from these articles
+                    and used these concepts to give us a foundation of research to form our first prototype from.
+                </p>
+                <p>
+                    Some of the most valuable articles I found included:
+                <ul>
+                    <li> <a href="https://www.nngroup.com/articles/checklist-registration-login/">A Checklist for
+                            Registration and Login Forms on Mobile</a>
+                    </li>
+                    <li><a href="https://www.nngroup.com/articles/security-and-human-factors/">Security & Human
+                            Factors</a></li>
+                    <li><a href="https://uxdesign.cc/design-restructure-otps-in-web-9788df9b4f71">One-time passwords on
+                            the web — a UX case study</a></li>
+                    <li><a
+                            href="https://www.behance.net/gallery/89785163/Improving-UX-through-authentication-A-UX-case-study">
+                            Improving UX through authentication: A UX case study</a></li>
+                </ul>
+
+                </p>
+                <h4>
+                    Prototype proposed journey
+                </h4>
+
+                <p>With a strong foundation of past user research and a solid understanding of the scope and need, I
+                    began to prototype. The solution provided to us from the security team meant I had little
+                    flexibility in the flow of the pages, but I could manipulate the design and the messaging to make it
+                    a more customer friendly experience with as little friction as possible.</p>
+
+                <p>The flow of the journey:</p>
+
+                <img src="https://dummyimage.com/600x400/dddddd/000000">
+
+                <p>The first prototype:</p>
+
+                <img src="https://dummyimage.com/600x400/dddddd/000000">
+
+            </div>
+        </article>
+
+        <article class="regular regular-2">
+            <div class="article-inner narrow">
+                <h3>Testing and validation</h3>
+
+                <p>One of our first questions was whether the call to action to login on budgetdirect.com.au was working
+                    as we intended. We ran an A/B test to determine if the “Policy Manager login” button text was the
+                    most effective call to action. In the first round we tested a number of different alternatives:</p>
+
+                <ul>
+                    <li>Control: “Policy manager login”</li>
+                    <li>Variant 1: “Manage your account”</li>
+                    <li>Variant 2: “Login”</li>
+                    <li>Variant 3: “Existing customer login”</li>
+                </ul>
+
+                <p>
+                    We ran this test for 2 weeks and quickly determined variant 2 was the most successful option, with a
+                    3% increase in customers successfully logging into our online self service portal, as well as a 2%
+                    increase in transactions through the online portal.
+                </p>
+
+                <h4>
+                    Iterate
+                </h4>
+
+                <p>
+                    After seeing the success of the “login” variant we iterated. Now knowing that customers prefer clear
+                    and concise labels, we tested “login” against a “sign in” call to action.
+                </p>
+                <p>
+                    Over a 30 day test we confirmed our earlier findings, that “login” was the preferred label for
+                    customers. We saw a 3.6% higher successful login rate than those customers that saw the “sign in”
+                    option.
+
+                </p>
+            </div>
+        </article>
+        <article class="regular regular-1">
+            <div class="article-inner narrow">
+
+                <h3>Exploratory user testing</h3>
+                <p>With a prototype in hand we ran a group of exploratory moderated user testing sessions. In this test
+                    we asked users to imagine they were a customer of Budget Direct and wanted to manage their policy
+                    online. </p>
+
+                <h4>Recruitment</h4>
+                <p>
+                    We used Brisbane based recruitment platform Askable to screen and recruit 6 participants
+                    representing an array of demographics that represent our typical user base. We split the tests
+                    across both mobile and desktop to get a true representation of how our users typically interact
+                    with
+                    out platforms.
+                </p>
+
+                <h4>Set up</h4>
+
+                <p>
+                    I translated the prototype from AdobeXD into Axure to give the participants a truly interactive
+                    experience with our prototype. Axure allows us to capture and process information entered, so we
+                    were able to provide a real representation of what the finished product would look like.
+                </p>
+                <p>
+                    For the purposes of the test we mocked up a mobile phone with an example of an authentication
+                    SMS
+                    that a customer might receive. We provided the mock up as a paper print out and asked the
+                    customer
+                    to image they had received the SMS on their personal mobile phone.
+
+                </p>
+
+                <h4>Test</h4>
+                <p>
+                    We followed a typical moderated user testing format
+                </p>
+                <ol>
+
+                    <li>Introduction and rapport building</li>
+                    <li>Set the scene – “you need to make a car insurance claim right now, what would you do?”</li>
+                    <li>Observe</li>
+                    <li>Once the user found the login button we switched to a prototype and let them continue</li>
+                    <li>After their successful login we wrapped this section up with some questions around their general
+                        sentiment towards to process
+                        <ul>
+                            <li>What did you think of the process?</li>
+                            <li>Would you use it? If not what would make you want to use it?</li>
+                            <li>How secure do you think it is? Why?</li>
+                            <li>Do you feel secure using your phone number for identification?</li>
+                        </ul>
+                    </li>
+                </ol>
+          
+
+                <h4>The outcome</h4>
+                <p>
+
+                <ul>
+                    <li>No one had a problem</li>
+                    <li>Everyone got through with no errors</li>
+                    <li>They recognised the PIN process from other websites eg. Banking</li>
+                    <li>Generally, they didn’t have any security concerns</li>
+                    <li>People generally didn’t notice the difference between the fist login and the second</li>
+                    <li>Because people enter from different places there is an opportunity to make the process
+                        smoother by personalising the title (eg: claiming, maintain their policy)</li>
+                </ul>
+                </p>
+
+                <h4>Gather and prioritise</h4>
+                <p>With a growing collection of information from customer feedback analysis as well as user
+                    testing
+                    we began to group themes amongst our findings and prioritized them based on the impact to
+                    the
+                    customer journey. We emphasized the problems that would completely prevent customers from
+                    logging in, as they went against our earlier defined goals. </p>
+
+                <h4>Present to the business</h4>
+                <p>From there we presented our findings back to the business, providing key stakeholders with
+                    much
+                    needed insights into the new journey and our findings. We recommended changes and important
+                    pieces of work that should be completed prior to go-live. Armed with this information, the
+                    business decided to move forward with their current solution, regardless of our findings.
+                </p>
+                <p>The business also wanted to decommission the legacy email and password login in tandem with
+                    the
+                    release of the OTP login. We strongly advised against this as we had no idea how successful
+                    the
+                    new OTP login would be, and how dependent customers would be on this legacy login. We
+                    suggested
+                    monitoring the success rate and impact on chat periodically to determine when our customers
+                    would be ready for such a change, to which the business agreed.</p>
+            </div>
+
+        </article>
+
+        <article class="regular regular-2">
+            <div class="article-inner narrow">
+                <h2>The Findings</h2>
+                <div class="layout-insight">
+                    <overline>Customer Insight #1</overline>
+                    <h4>
+                        No fallbacks
+                    </h4>
+                    <p>
+                    <ul>
+
+                        <li>When the customer fails to receive the SMS</li>
+                        <li>When the contact center is unavailable to fix the account</li>
+                        <li>When the customer is overseas (either permanently or on holiday)</li>
+                        <li>When the customers mobile number has changed</li>
+                        <li>When the customer doesn’t have a mobile phone</li>
+                        <li>When their mobile phone is flat or broken</li>
+                        <li>When the customer lives in a part of Australia with poor signal</li>
+                    </ul>
+                </div>
+
+                <div class="layout-insight">
+                    <overline>Customer Insight #2</overline>
+                    <h4>
+                        No consideration for customer security preferences
+                    </h4>
+                    <p>
+                    <ul>
+
+                        <li>Many customers find passwords more secure (especially those with password managers)</li>
+                        <li>Customer expect to be able to use email to receive their code</li>
+                    </ul>
+                </div>
+
+                <div class="layout-insight">
+                    <overline>Customer Insight #3</overline>
+                    <h4>
+                        No recovery methods for customers whose details don’t exactly match what we have saved
+                    </h4>
+                    <p>
+                    <ul>
+
+                        <li>Shortened first names (Mat instead of Matthew), exacerbated by our conversational quote
+                            questions</li>
+                        <li>Typos by consultants</li>
+                        <li>Missing punctuation such as apostrophes</li>
+                    </ul>
+                </div>
+
+
+                <div class="layout-insight">
+                    <overline>Customer Insight #4</overline>
+                    <h4>
+                        No consideration for customers in unconventional arrangements
+                    </h4>
+                    <p>
+                    <ul>
+
+                        <li>Children managing their elderly parents’ policies</li>
+                        <li>Personal Assistants looking after their managers company policy</li>
+                    </ul>
+                </div>
+
+
+                <h3>
+                    Decommissioning the legacy login
+                </h3>
+
+                <p>We began to monitor the success of the OTP login, and through A/B test we periodically assessed the
+                    impact of removing the legacy login.
+                </p>
+
+                <ul>
+                    <li>Test 2 (08/2020): -23.9% successful logins, +28% increase in chats</li>
+                    <li>Test 3 (04/2021): -53% successful logins, +18.7% increase in chats</li>
+                    <li>Test 4 (02/2022): +0.9% successful logins, -6% decrease in chats</li>
+                </ul>
+
+
+
+                <p>
+                    Finally, after 2 years of testing we felt comfortable removing the legacy email and password login,
+                    seeing from these results that we would not be adversely affecting the login rate, or increase the
+                    amount of contact into the contact centre.
+                </p>
+
+
+
+            </div>
+        </article>
+
+        <article class="regular regular-1">
+            <div class="article-inner narrow">
+                <h2>The next steps</h2>
+                <p>But there is always more work to be done, and now we need to work with the security team to provide
+                    an alternative method for receiving the code in order to close the last gap we identified.</p>
+            </div>
+        </article>
+
+        <article class="regular regular-2">
+            <div class="article-inner narrow">
+                <h2>The lessons learned</h2>
+            </div>
+        </article>
+
+
+    </main>
+</body>
+
+</html>
