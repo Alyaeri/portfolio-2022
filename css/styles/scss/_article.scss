@@ -203,8 +203,9 @@ article {
         .layout-insight {
             background-color: white;
             padding: $spacing-m;
-            margin-top: $spacing-m;
+            margin-top: $spacing-s;
             border-left: 4px solid $color-accent;
+            box-shadow: $box-shadow;
 
             h4 {
                 margin: $spacing-s 0 $spacing-xs 0;

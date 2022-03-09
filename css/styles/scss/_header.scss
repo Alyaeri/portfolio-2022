@@ -132,7 +132,7 @@ header {
 
         .top,
         .bottom {
-            padding: 0 calc(#{$spacing-xs} + #{$spacing-l});
+            padding: 0 $spacing-l;
         }
 
         .top,
