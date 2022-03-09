@@ -8,6 +8,74 @@ article {
         margin-top: $spacing-l;
     }
 
+    &.home {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/hero.jpg");
+    }
+
+    &.cs1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/cs1.jpg");
+    }
+    &.cs2 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/cs2.jpg");
+    }
+    &.cs3 {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/cs3.jpg");
+    }
+
+    &.home,
+    &.feature,
+    &.cs1,
+    &.cs2,
+    &.cs3 {
+        background-size: cover;
+
+        .mouse {
+            border: solid 3px white;
+            border-radius: 16px;
+            display: block;
+            margin: 0 auto;
+            height: 34px;
+            position: relative;
+            width: 22px;
+
+            .wheel {
+                background: white;
+                border-radius: 100%;
+                display: block;
+                position: absolute;
+                top: 8px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 5px;
+                width: 5px;
+                -webkit-animation: ani-mouse 2s linear infinite;
+                -moz-animation: ani-mouse 2s linear infinite;
+                animation: ani-mouse 2s linear infinite;
+            }
+        }
+    }
+
+    &.home {
+        height: calc(100vh - #{$spacing-l} - #{$spacing-l});
+        padding: $spacing-l;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1,
+        h2 {
+            text-transform: capitalize !important;
+        }
+
+        h1 {
+            margin-bottom: $spacing-s !important;
+        }
+
+        h2 {
+            margin-top: $spacing-s !important;
+        }
+    }
+
     &.feature,
     &.quote {
         background-color: $bkg-article-feature;
@@ -18,7 +86,8 @@ article {
         h4,
         h5,
         p,
-        blockquote, mark {
+        blockquote,
+        mark {
             color: #ffffff;
         }
     }
@@ -39,15 +108,12 @@ article {
     }
 
     &.regular {
-
         &.regular-1 {
             background-color: $bkg-article-regular-1;
         }
         &.regular-2 {
             background-color: $bkg-article-regular-2;
         }
-
-      
     }
 
     &.tools {
@@ -110,19 +176,18 @@ article {
             padding: $spacing-xs $spacing-m;
         }
 
-        .layout-insight{
+        .layout-insight {
             background-color: white;
             padding: $spacing-m;
             margin-top: $spacing-m;
-            border-left:  4px solid $color-accent;
+            border-left: 4px solid $color-accent;
 
-            h4{
-             margin: $spacing-s 0 $spacing-xs 0;
+            h4 {
+                margin: $spacing-s 0 $spacing-xs 0;
             }
 
-            p{
+            p {
                 font-size: 80%;
-            
             }
         }
     }

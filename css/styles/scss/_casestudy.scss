@@ -1,0 +1,77 @@
+.case-study {
+    background-color: white;
+    box-shadow: $box-shadow;
+    display: flex;
+
+    &:not(:last-of-type) {
+        margin-bottom: $spacing-m;
+    }
+    .wrap {
+        padding: $spacing-m;
+
+        h4 {
+            margin: $spacing-xs 0;
+        }
+
+        a {
+            text-transform: uppercase;
+ 
+            text-decoration: none;
+        
+        }
+    }
+}
+
+@-webkit-keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}
+
+@-moz-keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}
+
+@keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}

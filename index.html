@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,61 +11,163 @@
     <!-- FONT IMPORTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
     <title>Rachelle Patman | Senior UX / UI Designer</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     </script>
-    <script> 
-        $(document).ready(function(){
+    <script>
+        $(document).ready(function () {
             $("#header").load("_header.html");
         });
-    </script> 
+    </script>
 
 </head>
+
 <body>
     <div id="header"></div>
+
+    
+
     <main>
-        
-        <article id="home" class="regular">
-           <h1>Home section</h1>
-        </article> 
 
-         <article id="about" class="regular">
-            <h2>Hi, i'm Rachelle </h2>
-            
-            <p>
-                I'm a Brisbane based senior User Experience and User Interface designer with a passion for building design systems with a human touch.
-            </p>
-            <p>
-                I was bitten by the travel bug in 2019 and discovered a passion for architecture and photography.
-            </p>
-            <p>
-                I find myself drawn to unique shapes and lines, looking for patterns in all things. You'll find me snapping pics of the ceiling, often obvious to the fact that i'm about to stumble into an innocent passerby.
-            </p>
-            <p>
-                You can find me day dreaming about my next travel destination, or buried deep in a book.
-            </p>
-            <p>
-                Chao for now! 👋
-            </p>
-         </article>
+        <article id="home" class="home feature">
+            <div class="article-inner narrow">
+                <h1>Hi, I'm Elle!</h1>
+                    <h2>
+                    A
+                    <span class="strikethrough">graphic</span>,
+                    <span class="strikethrough">web</span>,
+                    <span class="strikethrough">UX</span>,
+                    <span class="strikethrough">UI</span>,
+                    <br>
+                    Product designer
+                
+                
+                </h2>
+                <hr class="line-header">
+               
+                <p>
+                    Based in Brisbane, Australia. I have a background in User Experience and User Interface design, and have been shaping the future of products throughout my career.
+                </p>
+                
+            </div>
 
-         <article class="image half">
-          
-          <img src="/images/about/louvre-roof.png"><img src="/images/about/pantheon-roof.png">
+            <a class="scroll mouse" href="index.html#case-studies">
+                <span class="wheel"></span>
+            </a>
+        </article>     
+
+        <article id="case-studies" class="regular regular-2">
+            <div class="article-inner narrow">
+
+                <h2>Case studies</h2>
+                <div class="case-study">
+                    <img src="https://dummyimage.com/200x200/dddddd/000000">
+                    <div class="wrap">
+                        <h4>Care to compare</h4>
+                        <p class="small">Enhancing the process of comparing benefits across insurance policies</p>
+                        <a class="btn btn-alt btn-animation" href="care-to-compare.html">Read more </a>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <img src="https://dummyimage.com/200x200/dddddd/000000">
+                    <div class="wrap">
+                        <h4>The ultimate design system</h4>
+                        <p class="small">Creating a reusable and extensible design system to facilitate rapid project delivery</p>
+                        <a class="btn btn-alt btn-animation" href="design-system.html">Read more <span class="arrow-right"></span></a>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <img src="https://dummyimage.com/200x200/dddddd/000000">
+                    <div class="wrap">
+                        <h4>A more convenient login</h4>
+                        <p class="small">Improving the security of our online self service platform</p>
+                        <a class="btn btn-alt btn-animation" href="a-more-convenient-login.html">Read more <span class="arrow-right"></span></a>
+                    </div>
+                </div>
+
+            </div>
+
         </article>
-        
-        <article id="case-studies" class="regular">
-            <h2>Case studies section</h2>
 
-            <a href="care-to-compare.html">Care to compare</a>
+        <article id="about" class="regular regular-1">
+            <div class="article-inner narrow">
 
-            <a href="design-system.html">Design system</a>
+                <h2>Hi, i'm Elle </h2>
 
-            <a href="more-secure-authentication.html">Authentication</a>
-         </article>
-         
+                <p>
+                    I'm a Brisbane based senior User Experience and User Interface designer with a passion for building
+                    design systems with a human touch.
+                </p>
+                <p>
+                    I was bitten by the travel bug in 2019 and discovered a passion for architecture and photography.
+                </p>
+                <p>
+                    I find myself drawn to unique shapes and lines, looking for patterns in all things. You'll find me
+                    snapping pics of the ceiling, often obvious to the fact that i'm about to stumble into an innocent
+                    passerby.
+                </p>
+                <p>
+                    You can find me day dreaming about my next travel destination, or buried deep in a book.
+                </p>
+                <p>
+                    Chao for now! 👋
+                </p>
+            </div>
+
+        </article>
+
+        <article id="about" class="regular regular-2">
+            <div class="article-inner narrow">
+
+                <h2>Experience</h2>
+
+                <ol class="timeline">
+                    <li>
+                        <overline>2018 - now</overline>
+                        <h4>UX / UI Specialist</h4>
+                        <p  class="small">Auto & General</p>
+                    </li>
+                    <li>
+                        <overline>2017 - 2018</overline>
+                        <h4>UX / UI Designer</h4>
+                        <p  class="small">OrgCanvas</p>
+                    </li>
+                    <li>
+                        <overline>2015 - 2017</overline>
+                        <h4>UX / UI Designer</h4>
+                        <p  class="small">Tactiv</p>
+                    </li>
+                    <li>
+                        <overline>2012 - 2015</overline>
+                        <h4>Bachelor of Multimedia Design</h4>
+                        <p  class="small">The University of Queensland</p>
+                    </li>
+                    <li>
+                        <overline>2011</overline>
+                        <h4>Certificate II in Information Technology</h4>
+                        <p  class="small">Tafe Queensland</p>
+                    </li>
+
+
+                    <span class="timeline-line"></span>
+
+                </ol>
+
+            </div>
+
+        </article>
+
+        <article class="image full">
+
+            <img src="/images/louvre-roof.jpg">
+        </article>
     </main>
 </body>
+
 </html>

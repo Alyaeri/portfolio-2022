@@ -51,10 +51,19 @@ mark {
     padding: 0 2px;
 }
 
+p.small{
+    font-size: 80%;
+}
+
 overline {
     font-size: $font-size-overline;
     text-transform: uppercase;
     font-family: $font-family-h5;
     font-weight: 600;
     color: $font-color-body-light;
+}
+
+
+.strikethrough{
+    text-decoration: line-through;
 }
