@@ -4,14 +4,14 @@ $bkg-body: #f8f8f8;
 
 $color-accent: hsl(224, 72%, 65%);
 
-$layout-cols-header: calc((100vw/12) * 3);
-$layout-cols-body:  calc((100vw/12) * 9);
+$layout-cols-header: calc((100vw / 12) * 3);
+$layout-cols-body: calc((100vw / 12) * 9);
 
 $bkg-article-feature: #1e1e1e;
 $bkg-article-regular-1: #ffffff;
 $bkg-article-regular-2: #eeeeee;
 
-// TYPOGRAPHY 
+// TYPOGRAPHY
 $scale: 1.15;
 $font-size-body: 1rem;
 $font-size-menu: calc(#{$font-size-body} / #{$scale});
@@ -23,24 +23,22 @@ $font-size-h3: calc(#{$font-size-h4} * #{$scale} * #{$scale});
 $font-size-h2: calc(#{$font-size-h3} * #{$scale} * #{$scale} * #{$scale});
 $font-size-h1: calc(#{$font-size-h2} * #{$scale} * #{$scale} * #{$scale});
 
-$font-family-h1: 'Montserrat', serif;
-$font-family-h2: 'Montserrat', serif;
-$font-family-h3: 'Montserrat', serif;
-$font-family-h4: 'Montserrat', serif;
-$font-family-h5: 'Montserrat', serif;
-$font-family-body: 'Open Sans', sans-serif;
+$font-family-h1: "Montserrat", serif;
+$font-family-h2: "Montserrat", serif;
+$font-family-h3: "Montserrat", serif;
+$font-family-h4: "Montserrat", serif;
+$font-family-h5: "Montserrat", serif;
+$font-family-body: "Open Sans", sans-serif;
 
-$font-family-menu: 'Montserrat', serif;
+$font-family-menu: "Montserrat", serif;
 
-$font-color-h1: #252B33;
-$font-color-h2: #252B33;
-$font-color-h3: #252B33;
-$font-color-h4: #252B33;
-$font-color-h5: #252B33;
-$font-color-body: #252B33;
+$font-color-h1: #252b33;
+$font-color-h2: #252b33;
+$font-color-h3: #252b33;
+$font-color-h4: #252b33;
+$font-color-h5: #252b33;
+$font-color-body: #252b33;
 $font-color-body-light: #767676;
-
-
 
 // spacing
 $spacing-xl: 8rem;
@@ -49,6 +47,6 @@ $spacing-m: 2rem;
 $spacing-s: 1rem;
 $spacing-xs: 0.5rem;
 
-$spacing-article: $spacing-l $spacing-l $spacing-xl $spacing-l;
-
 $box-shadow: 0 0 20px #dfdfdf;
+
+$menu-height-mobile: $spacing-l;

@@ -1,5 +1,6 @@
 <script>
 
+
   var addClassOnScroll = function () {
     var windowTop = $(window).scrollTop();
     $('article[id]').each(function (index, elem) {
@@ -82,11 +83,16 @@ function markActiveLink() {
 
 markActiveLink();
 
+
+$('#mobile-menu-toggle').on('click', function(){
+    $('#nav').toggleClass('open');
+    $('#mobile-menu-toggle').toggleClass('open');
+});
 </script>
 
 <header>
     <div class="top">
-        <a class="scroll" id="logo" href="index.html">TEXT.</a>
+        <a class="scroll" id="logo" href="index.html">ELLE.</a>
     </div>
 
    <nav id="nav">
@@ -98,6 +104,13 @@ markActiveLink();
         <a class="menu-sub" href="a-more-convenient-login.html" id="btn-cs3">A more convenient login</a>
         <a class="scroll" href="index.html#about" id="btn-about">About</a>
    </nav>
+
+   <div id="mobile-menu-toggle" class="" onClick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+   </div>
 
    <div class="bottom">
        <p>Made with ❤️ by me</p>

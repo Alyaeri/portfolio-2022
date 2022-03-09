@@ -1,5 +1,29 @@
+// ipad and lower
+@media screen and (max-width: 1020px) {
+    article {
+        padding: $spacing-s $spacing-s $spacing-m $spacing-s;
+
+        .mouse{
+            display: none;
+        }
+    }
+}
+
+// higher than ipad
+@media screen and (min-width: 1021px) {
+    article {
+        padding: $spacing-l $spacing-l $spacing-xl $spacing-l;
+
+      
+
+        .mouse{
+            display: block;
+        }
+    }
+}
+
 article {
-    padding: $spacing-article;
+
 
     h1,
     h2,
@@ -32,7 +56,7 @@ article {
         .mouse {
             border: solid 3px white;
             border-radius: 16px;
-            display: block;
+           
             margin: 0 auto;
             height: 34px;
             position: relative;
@@ -56,8 +80,7 @@ article {
     }
 
     &.home {
-        height: calc(100vh - #{$spacing-l} - #{$spacing-l});
-        padding: $spacing-l;
+        min-height: calc(100vh - #{$spacing-l} - #{$spacing-xl});
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -155,6 +178,7 @@ article {
     .article-inner {
         margin: 0 auto;
         max-width: 900px;
+       
 
         &.narrow,
         .narrow {
@@ -190,5 +214,61 @@ article {
                 font-size: 80%;
             }
         }
+    }
+}
+
+
+
+@-webkit-keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}
+
+@-moz-keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
+    }
+}
+
+@keyframes ani-mouse {
+    0% {
+        top: 29%;
+    }
+
+    15% {
+        top: 50%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 29%;
     }
 }
