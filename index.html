@@ -22,12 +22,22 @@
         $(document).ready(function () {
             $("#header").load("_header.html");
             $("#footer").load("_footer.html");
+
+            setTimeout(
+                function () {
+                    $("#preloader").addClass("preloaded");
+                }, 1500);
         });
     </script>
 
 </head>
 
 <body>
+
+    <div id="preloader">
+        <div class="loader_line"></div>
+    </div>
+
     <div id="header"></div>
 
     <main>
