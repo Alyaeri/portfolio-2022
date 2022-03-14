@@ -3,8 +3,26 @@
     article {
         padding: $spacing-s $spacing-s $spacing-m $spacing-s;
 
-        .mouse{
+        .mouse {
             display: none;
+        }
+
+        .data-images {
+            padding-top: $spacing-m;
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                div {
+                    flex: 50%;
+                    img {
+                        height: 30px;
+                        padding: $spacing-xs 0;
+                    }
+                }
+            }
         }
     }
 }
@@ -14,17 +32,30 @@
     article {
         padding: $spacing-l $spacing-l $spacing-xl $spacing-l;
 
-      
-
-        .mouse{
+        .mouse {
             display: block;
+        }
+
+        .data-images {
+            padding-top: $spacing-m;
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+
+                div {
+                    flex: 50%;
+                    img {
+                        height: 40px;
+                        padding: $spacing-s 0;
+                    }
+                }
+            }
         }
     }
 }
 
 article {
-
-
     h1,
     h2,
     h3,
@@ -56,7 +87,7 @@ article {
         .mouse {
             border: solid 3px white;
             border-radius: 16px;
-           
+
             margin: 0 auto;
             height: 34px;
             position: relative;
@@ -178,7 +209,6 @@ article {
     .article-inner {
         margin: 0 auto;
         max-width: 900px;
-       
 
         &.narrow,
         .narrow {
@@ -217,8 +247,6 @@ article {
         }
     }
 }
-
-
 
 @-webkit-keyframes ani-mouse {
     0% {
