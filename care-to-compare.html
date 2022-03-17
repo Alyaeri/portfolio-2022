@@ -20,7 +20,10 @@
     <title>Care To Compare | Elle Patman | Senior UX / UI Designer</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         $(document).ready(function () {
             $("#header").load("_header.html");
@@ -55,7 +58,7 @@
         </article>
 
 
-      
+
 
         <article class="regular regular-2">
             <div class="article-inner narrow">
@@ -323,7 +326,88 @@
 
                 </p>
 
-                <img src="images/case-studies/case-study-1/img_cs1-how-does-the-need-differ.png">
+                <div class="graphs">
+                    <div class="chart1">
+                        <canvas id="gender"></canvas>
+                    </div>
+                    <div class="chart2">
+                        <canvas id="age"></canvas>
+                    </div>
+                </div>
+
+
+                <script>
+                    const ctx = document.getElementById('gender');
+
+                    const myChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Male', 'Female'],
+                            datasets: [{
+                                data: [1, 1],
+                                backgroundColor: [
+                                    '#1e1e1e',
+                                    '#5c5c5c',
+                                ],
+
+                                borderWidth: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                yAxes: [{
+                                    gridLines: {
+                                        drawBorder: false,
+                                    },
+                                }]
+                            },
+                            legend: {
+                                position: 'bottom'
+                            },
+                        },
+                    });
+
+                </script>
+
+                <script>
+                    const ctx2 = document.getElementById('age');
+
+                    const myChart2 = new Chart(ctx2, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['18 - 24', '25 - 34', '35 - 44', '45 - 54', '55 - 64', '65 +'],
+                            datasets: [{
+                                data: [1, 1, 1, 1, 1, 1],
+                                backgroundColor: [
+                                    '#1e1e1e',
+                                    '#5c5c5c',
+                                    '#1e1e1e',
+                                    '#5c5c5c',
+                                    '#1e1e1e',
+                                    '#5c5c5c',
+                                ],
+
+                                borderWidth: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                yAxes: [{
+                                    gridLines: {
+                                        drawBorder: false,
+                                    },
+                                }]
+                            },
+                            legend: {
+                                position: 'bottom'
+                            },
+                        },
+                    });
+
+                </script>
+
             </div>
 
         </article>
@@ -358,7 +442,7 @@
                 <p>The participant demonstrates how they would typically find, compare and purchase an insurance
                     policy. This might be through Google, a comparison website, or direct to a brand they know. We
                     observed their research process and what information was truly valuable to them.</p>
-                    <img src="images/case-studies/case-study-1/img_cs1-step-2.png">
+                <img src="images/case-studies/case-study-1/img_cs1-step-2.png">
 
                 <h3>STEP 3: Current state price page</h3>
                 <p>We ask the participant to pause their journey at the price page and take a deeper look. We have
@@ -369,23 +453,23 @@
                     <li>What is missing from this page?</li>
                     <li>Is there anything you would remove all together?</li>
                 </ul>
-                <img src="images/case-studies/case-study-1/img_cs1-step-3.png">>
+                <img src="images/case-studies/case-study-1/img_cs1-step-3.png">
                 <h3>STEP 4: Compare and contrast</h3>
                 <p>We show the participant an interactive prototype of the new design of this page and ask them to
                     repeat the previous step.</p>
-                    <img src="images/case-studies/case-study-1/img_cs1-step-4.png">
+                <img src="images/case-studies/case-study-1/img_cs1-step-4.png">
 
                 <h3>STEP 5: Paper prototyping</h3>
                 <p>After seeing both versions of the page and hearing their thoughts, we ask the participant to
                     craft their ideal price page with the pieces of the original designs, as well as sticky notes
                     for anything new they'd like to add.</p>
-                    <img src="images/case-studies/case-study-1/img_cs1-step-5.png">
+                <img src="images/case-studies/case-study-1/img_cs1-step-5.png">
 
                 <h3>STEP 6: Prioritizing benefits</h3>
                 <p>We asked the participants to perform some card sorting in order to prioritise which benefits mean
                     more to them. We also asked that they leave out any benefits they simply do not care about at
                     all.</p>
-                    <img src="images/case-studies/case-study-1/img_cs1-step-6.png">
+                <img src="images/case-studies/case-study-1/img_cs1-step-6.png">
 
             </div>
         </article>
@@ -417,7 +501,7 @@
                         purchaser?
                     </p>
 
-                    
+
                 </div>
 
 
@@ -498,8 +582,7 @@
                     on is insurance. Budget Direct takes the confusion out of insurance with its award winning design,
                     making comparing insurance easier than ever. Insurance solved.</p>
 
-                    <img src="images/case-studies/case-study-1/img_cs1-solution-1.png">
-
+                <img class="phone" src="images/case-studies/case-study-1/img_cs1-solution-1.png">
 
                 <h3>
                     All the plus, none of the fuss
@@ -509,11 +592,7 @@
                     Benefits
                 </p>
 
-
-                
-                <img src="images/case-studies/case-study-1/img_cs1-solution-2.png">
-
-
+                <img class="phone" src="images/case-studies/case-study-1/img_cs1-solution-2.png">
 
                 <h3>
                     Now you're speaking my language
@@ -523,10 +602,7 @@
                     Simpiler text, more explainations
                 </p>
 
-
-                
-                <img src="images/case-studies/case-study-1/img_cs1-solution-3.png">
-
+                <img class="phone" src="images/case-studies/case-study-1/img_cs1-solution-3.png">
 
                 <h3>
                     Setting expectations
@@ -536,12 +612,7 @@
                     xx
                 </p>
 
-
-                
-                <img src="images/case-studies/case-study-1/img_cs1-solution-4.png">
-
-
-
+                <img class="phone" src="images/case-studies/case-study-1/img_cs1-solution-4.png">
 
             </div>
         </article>
@@ -564,10 +635,31 @@
                         +3.2%)</li>
                 </ul>
 
+                <div class="graphs">
+                    <canvas id="impact1"></canvas>
+                </div>
 
-              
-                <img src="images/case-studies/case-study-1/img_cs1-impact-1.png">
+                <script>
+                    new Chart(document.getElementById("impact1"), {
+                        type: 'line',
+                        data: {
+                            labels: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+                            datasets: [{
+                                data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                                label: "Original page",
+                                borderColor: "#3e95cd",
+                                fill: false
+                            }, {
+                                data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                                label: "New page",
+                                borderColor: "#8e5ea2",
+                                fill: false
+                            }
+                            ]
+                        },
+                    });
 
+                </script>
 
                 <h3>It wasn't all good news</h3>
                 <p>We did see an increase in the number of users selecting an annual payment frequency (+3.8%), and
@@ -575,7 +667,31 @@
                     new design defaulting to annual payment frequencies instead of requiring a selection.
                 </p>
 
-                <img src="images/case-studies/case-study-1/img_cs1-impact-2.png">
+                <div class="graphs">
+                    <canvas id="impact2"></canvas>
+                </div>
+
+                <script>
+                    new Chart(document.getElementById("impact2"), {
+                        type: 'line',
+                        data: {
+                            labels: [9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+                            datasets: [{
+                                data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                                label: "Original page",
+                                borderColor: "#3e95cd",
+                                fill: false
+                            }, {
+                                data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                                label: "New page",
+                                borderColor: "#8e5ea2",
+                                fill: false
+                            }
+                            ]
+                        },
+                    });
+
+                </script>
 
                 <h3>Run it back</h3>
                 <p>To confirm this theory, we ran another A/B test. This time we tested the new design against an

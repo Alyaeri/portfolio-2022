@@ -67,7 +67,7 @@ header {
     }
     header {
         height: $menu-height-mobile;
-        border-bottom: 1px solid #ebebeb;
+        border-bottom: 1px solid $color-border;
         z-index: 2;
         display: flex;
         justify-content: space-between;
@@ -114,7 +114,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: left;
-        border-right: 1px solid #ebebeb;
+        border-right: 1px solid $color-border;
         font-size: $font-size-menu;
 
         #nav{

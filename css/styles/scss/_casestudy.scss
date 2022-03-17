@@ -3,6 +3,11 @@
     box-shadow: $box-shadow;
     display: flex;
 
+    img{
+        max-width: 230px;
+        background-color: $bkg-article-feature;
+    }
+
     &:not(:last-of-type) {
         margin-bottom: $spacing-m;
     }
