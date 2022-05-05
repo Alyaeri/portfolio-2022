@@ -1,5 +1,7 @@
-.timeline {
-    .timeline-section {
+.timeline,
+.process {
+    .timeline-section,
+    li {
         background-color: $bkg-article-regular-1;
         box-shadow: $box-shadow;
         display: flex;
@@ -13,12 +15,13 @@
         p {
             margin: 0;
             flex: 2;
-           
+
             font-family: $font-family-body;
             padding: 0 0 0 $spacing-s;
         }
 
-        .chip {
+        .chip,
+        .count {
             font-family: $font-family-body;
             font-size: $font-size-overline;
             padding: 0.35rem 0.75rem;
@@ -38,11 +41,31 @@
             font-size: $font-size-menu;
         }
 
-        
         p {
             text-align: right;
             color: $font-color-body-light;
             font-size: $font-size-menu;
+        }
+    }
+}
+
+.process {
+    padding: 0;
+
+    li {
+        .count {
+            align-self:flex-start;
+        }
+        div {
+
+            h4{
+                margin: 0.2rem 0 $spacing-xs 0 ;
+            }
+            p {
+                text-align: left;
+                font-size: 80%;
+                color: $font-color-body;
+            }
         }
     }
 }
