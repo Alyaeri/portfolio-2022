@@ -72,3 +72,10 @@ overline {
 a{
     color: $color-accent;
 }
+
+figcaption{
+    font-size: $font-size-overline;
+    font-family: $font-family-h5;
+    font-weight: 400;
+    color: $font-color-body-light;
+}

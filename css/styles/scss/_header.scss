@@ -23,33 +23,17 @@ header {
             letter-spacing: 1px;
             color: $font-color-body-light;
             text-decoration: none;
-            margin: 0.25rem 0;
+            margin-bottom: $spacing-xs;
             position: relative;
             float: left;
             clear: both;
-
-            padding: 0 4px;
-
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 2px;
-                height: 0px;
-                transition: height 0.25s linear;
-                background-color: rgba($color-accent, 0.5);
-                z-index: -1;
-            }
+            border-radius: $border-radius;
+            padding: calc(#{$spacing-xs} / 2) $spacing-xs;
 
             &.active {
+                background-color: $bkg-article-regular-2;
                 font-weight: 600;
-
                 color: $font-color-body;
-
-                &:after {
-                    height: 7px;
-                }
             }
 
             &.menu-sub {
@@ -87,7 +71,6 @@ header {
         z-index: 1;
     }
 
-
     #nav {
         position: fixed;
         z-index: 2;
@@ -117,7 +100,7 @@ header {
         border-right: 1px solid $color-border;
         font-size: $font-size-menu;
 
-        #nav{
+        #nav {
             padding: $spacing-m $spacing-l;
         }
 

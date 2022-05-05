@@ -1,40 +1,72 @@
-.case-study {
-    background-color: white;
-    box-shadow: $box-shadow;
+.grid {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: $spacing-m;
+    column-gap: $spacing-m;
 
-    img{
-        max-width: 230px;
-        background-color: $bkg-article-feature;
-    }
-
-    &:not(:last-of-type) {
-        margin-bottom: $spacing-m;
-    }
-    .wrap {
-        padding: $spacing-m;
-
-        h4 {
-            margin: $spacing-xs 0;
-        }
-
-        a {
-            text-transform: uppercase;
-
-            text-decoration: none;
-        }
-    }
-}
-
-// ipad and lower
-@media screen and (max-width: 1020px) {
     .case-study {
+        background-color: white;
+        box-shadow: $box-shadow;
+        display: flex;
+        width: 100%;
         flex-direction: column;
+        position: relative;
+        border-radius: $border-radius;
+
+        img {
+            width: 100%;
+            background-color: $bkg-article-feature;
+            height: 250px;
+            border-radius: $border-radius $border-radius 0 0;
+        }
+
+        .chip {
+            
+            position: absolute;
+            top: $spacing-xs;
+            right: $spacing-xs;
+
+            font-family: $font-family-body;
+            font-size: $font-size-overline;
+            padding: 0.35rem 0.75rem;
+            font-weight: 700;
+
+            border-radius: $border-radius;
+            color: $font-color-body;
+            background: $color-border;
+
+       
+            
+        }
+
+        .wrap {
+            padding: $spacing-m;
+
+            h4 {
+                margin: $spacing-xs 0;
+            }
+
+            p {
+                margin: $spacing-xs 0 $spacing-m 0;
+            }
+
+            a {
+                text-transform: uppercase;
+
+                text-decoration: none;
+            }
+        }
     }
-}
-// higher than ipad
-@media screen and (min-width: 1021px) {
-    .case-study {
-        flex-direction: row;
-    }
+
+    // ipad and lower
+    // @media screen and (max-width: 1020px) {
+    //     .case-study {
+    //         flex-direction: column;
+    //     }
+    // }
+    // // higher than ipad
+    // @media screen and (min-width: 1021px) {
+    //     .case-study {
+    //         flex-direction: row;
+    // }    }
 }
