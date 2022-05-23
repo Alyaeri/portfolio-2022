@@ -534,6 +534,14 @@ article .article-inner .layout-insight p, article .article-inner .layout-insight
   font-size: 80%;
 }
 
+article #container {
+  height: 500px;
+}
+
+article .anychart-credits {
+  display: none;
+}
+
 @-webkit-keyframes ani-mouse {
   0% {
     top: 29%;

@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/styles/flexboxgrid-6.3.1/css/flexboxgrid.css">
 
-
-
     <!-- FONT IMPORTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,13 +18,16 @@
     <title>The Ultimate Design System | Elle Patman | Senior UX / UI Designer</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    </script>
+    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-venn.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $("#header").load("_header.html");
             $("#footer").load("_footer.html");
         });
     </script>
+
 </head>
 
 <body>
@@ -50,13 +51,8 @@
                 <img src="images/case-studies/logos/adobexd.svg" alt="Adobe XD logo">
                 <img src="images/case-studies/logos/zeplin.svg" alt="Zeplin logo">
                 <img src="images/case-studies/logos/storybook.svg" alt="Storybookjs logo">
-
             </div>
         </article>
-
-
-
-
 
         <article class="regular regular-2">
             <div class="article-inner narrow">
@@ -94,10 +90,7 @@
                     the dev teams.
                 </p>
             </div>
-
         </article>
-
-
 
         <article class="regular regular-1">
             <div class="article-inner narrow">
@@ -177,7 +170,6 @@
             </div>
         </article>
 
-
         <article class="quote">
             <div class="article-inner narrow">
                 <blockquote>
@@ -185,8 +177,6 @@
                 </blockquote>
             </div>
         </article>
-
-
 
         <article class="regular regular-1">
             <div class="article-inner narrow">
@@ -219,8 +209,106 @@
                         point </mark>
                     in conversations with proposed partners.</p>
 
-                <img src="images/case-studies/case-study-2/img_cs2-defining-success.png"
-                    alt="Venn diagram of the overlapping needs for different teams">
+                <div id="container"></div>
+
+                <script>
+                    var data = [
+                        {
+                            x: "A",
+                            name: "Dev \n Team",
+                            value: 100,
+                            normal: { fill: "#767676 0.35" },
+                            hovered: { fill: "#767676 0.35" },
+                            selected: { fill: "#767676 0.35" }
+                        },
+                        {
+                            x: "B",
+                            name: "Business",
+                            value: 100,
+                            normal: { fill: "#767676 0.35" },
+                            hovered: { fill: "#767676 0.35" },
+                            selected: { fill: "#767676 0.35" }
+                        },
+                        {
+                            x: "C",
+                            name: "Design \n Team",
+                            value: 100,
+                            normal: { fill: "#767676 0.35" },
+                            hovered: { fill: "#767676 0.35" },
+                            selected: { fill: "#767676 0.35" }
+                        },
+                        {
+                            x: ["A", "B"],
+                            name: "Faster \n build",
+                            value: 30,
+                            normal: { fill: "#ffffff", stroke: "2 #1e1e1e" },
+                            hovered: { fill: "#ffffff", stroke: "2 #1e1e1e" },
+                            selected: { fill: "#ffffff", stroke: "2 #1e1e1e" }
+                        },
+                        {
+                            x: ["B", "C"],
+                            name: "Rapid \n prototyping",
+                            value: 30,
+                            normal: { fill: "#ffffff", stroke: "2 #1e1e1e" },
+                            hovered: { fill: "#ffffff", stroke: "2 #1e1e1e" },
+                            selected: { fill: "#ffffff", stroke: "2 #1e1e1e" }
+                        },
+                        {
+                            x: ["C", "A"],
+                            name: "Consistent \n look & feel",
+                            value: 30,
+                            normal: { fill: "#ffffff", stroke: "2 #1e1e1e" },
+                            hovered: { fill: "#ffffff", stroke: "2 #1e1e1e" },
+                            selected: { fill: "#ffffff", stroke: "2 #1e1e1e" }
+                        },
+                        {
+                            x: ["A", "B", "C"],
+                            name: "Design \n system",
+                            value: 30,
+                            normal: { fill: "#6588e6 0.75", stroke: "2 #1e1e1e" },
+                            hovered: { fill: "#6588e6 0.75", stroke: "2 #1e1e1e" },
+                            selected: { fill: "#6588e6 0.75", stroke: "2 #1e1e1e" }
+                        }
+                    ];
+
+                    // create a chart and set the data
+                    chart = anychart.venn(data);
+
+                    // configure labels of intersections
+                    chart.labels().format('{%Name}');
+
+                    // set the container id
+                    chart.container('container');
+
+                    chart.legend(false);
+                    chart.tooltip(false);
+
+                    chart.normal().stroke("#1e1e1e", 4);
+                    chart.hovered().stroke("#1e1e1e", 4);
+                    chart.selected().stroke("#1e1e1e", 4);
+
+
+                    var intersections = chart.intersections();
+
+
+                    var labels = chart.labels();
+                    labels.fontColor('#1e1e1e');
+                    labels.fontSize(24);
+                    labels.fontFamily('Montserrat');
+                    labels.fontWeight('bold');
+
+
+                    var labels = intersections.labels();
+                    labels.fontColor('#1e1e1e');
+                    labels.fontSize(14);
+                    labels.fontFamily('Open Sans');
+
+
+
+                    // initiate drawing the chart
+                    chart.draw();
+
+                </script>
 
             </div>
 

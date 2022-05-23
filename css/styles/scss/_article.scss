@@ -109,7 +109,9 @@ article {
                 -moz-animation: ani-mouse 2s linear infinite;
                 animation: ani-mouse 2s linear infinite;
             }
-        }
+        } 
+     
+
     }
 
     &.home {
@@ -244,6 +246,15 @@ article {
                 font-size: 80%;
             }
         }
+    }
+
+       
+    #container {
+        height: 500px;
+    }
+
+    .anychart-credits {
+        display: none;
     }
 }
 
