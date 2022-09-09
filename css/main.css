@@ -117,6 +117,107 @@ body {
   }
 }
 
+.login-page {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("/images/hero.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/hero.jpg");
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-page form .login-invalid {
+  color: white;
+  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-weight: 400;
+  margin: 0.25rem 0;
+  min-height: 24px;
+}
+
+.login-page form .login-invalid.show span {
+  display: block;
+}
+
+.login-page form .login-invalid span {
+  display: none;
+}
+
+.login-page form .input-wrap {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 6px 6px 12px;
+  border: 2px solid white;
+}
+
+.login-page form .input-wrap input,
+.login-page form .input-wrap button {
+  font-family: "Open Sans", sans-serif;
+  font-size: calc(calc(1rem / 1.15) / 1.15);
+  height: 40px;
+}
+
+.login-page form .input-wrap input {
+  font-weight: 800;
+  background-color: transparent;
+  border: none;
+  width: 200px;
+  color: white;
+}
+
+.login-page form .input-wrap input::-webkit-input-placeholder {
+  font-style: italic;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.login-page form .input-wrap input:-ms-input-placeholder {
+  font-style: italic;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.login-page form .input-wrap input::-ms-input-placeholder {
+  font-style: italic;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.login-page form .input-wrap input::placeholder {
+  font-style: italic;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.login-page form .input-wrap input:focus, .login-page form .input-wrap input:active {
+  outline: none;
+}
+
+.login-page form .input-wrap button {
+  width: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
 .grid {
   display: -webkit-box;
   display: -ms-flexbox;

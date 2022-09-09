@@ -1,3 +1,14 @@
+<?php
+session_set_cookie_params(0);
+session_start();
+
+if (!isset($_SESSION['is-user-logged'])) {
+    header("Location: login.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,25 +22,23 @@
     <!-- FONT IMPORTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Elle Patman | Senior UX / UI Designer</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $("#header").load("_header.html");
             $("#footer").load("_footer.html");
 
             setTimeout(
-                function () {
+                function() {
                     $("#preloader").addClass("preloaded");
                 }, 1500);
 
             setTimeout(
-                function () {
+                function() {
                     $("#preloader").remove();
                 }, 2500);
         });
@@ -97,8 +106,7 @@
                             <p class="small">Creating a reusable and extensible design system to facilitate rapid
                                 project
                                 delivery</p>
-                            <a class="btn btn-alt btn-animation" href="the-ultimate-design-system.html">Read more <span
-                                    class="arrow-right"></span></a>
+                            <a class="btn btn-alt btn-animation" href="the-ultimate-design-system.html">Read more <span class="arrow-right"></span></a>
                         </div>
                     </div>
 
@@ -108,8 +116,7 @@
                         <div class="wrap">
                             <h4>A more convenient login</h4>
                             <p class="small">Improving the security of our online self service platform</p>
-                            <a class="btn btn-alt btn-animation" href="a-more-convenient-login.html">Read more <span
-                                    class="arrow-right"></span></a>
+                            <a class="btn btn-alt btn-animation" href="a-more-convenient-login.html">Read more <span class="arrow-right"></span></a>
                         </div>
                     </div>
                 </div>
@@ -157,7 +164,7 @@
                         <div class="chip">Currently</div>
 
                         <h4>
-                          Senior UX / UI Designer
+                            Senior UX / UI Designer
                         </h4>
                         <p>
                             Auto & General
