@@ -1,5 +1,6 @@
 .login-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/hero.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/login.png");
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -7,6 +8,9 @@
     justify-content: center;
 
     form {
+        &.no {
+            background-color: red;
+        }
         .login-invalid {
             color: white;
             font-size: $font-size-overline;
@@ -14,7 +18,7 @@
             margin: 0.25rem 0;
             min-height: 24px;
 
-            &.show {
+            &.yes {
                 span {
                     display: block;
                 }
@@ -25,7 +29,7 @@
         }
 
         .input-wrap {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 0, 0, 0.75);
             border-radius: $border-radius;
             display: flex;
             align-items: center;
@@ -40,7 +44,7 @@
             }
 
             input {
-                font-weight: 800;
+                font-weight: 400;
                 background-color: transparent;
                 border: none;
                 width: 200px;
@@ -49,7 +53,7 @@
                 &::placeholder {
                     font-style: italic;
                     color: white;
-                    font-weight: 800;
+                    font-weight: 400;
                     letter-spacing: 1px;
                 }
 

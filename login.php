@@ -2,10 +2,11 @@
 session_set_cookie_params(0);
 session_start();
 
-$invalid = "no";
+$invalid = " ";
 
 if (isset($_POST['password'])) {
   if ($_POST['password'] == 'howdy') {
+    $invalid = "no";
     $_SESSION['is-user-logged'] = 1;
     header("location:index.php");
     exit;
@@ -14,7 +15,6 @@ if (isset($_POST['password'])) {
   }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,14 +39,13 @@ if (isset($_POST['password'])) {
 
 <body class="login-page">
 
-  <form action='login.php' method="post">
+  <form id="loginForm" action='login.php' method="post" class="form">
     <h4>LOGO HERE</h4>
-
     <div class="input-wrap">
       <input type="password" name="password" id="password" placeholder="The secret word...">
-      <button type="submit">➜</button>
+      <button type="submit" onClick="validateLogin()">➜</button>
     </div>
-    <p id="loginInvalid" class="login-invalid <?php echo ($invalid == 'yes') ? 'show' : ''; ?>">
+    <p id="loginInvalid" class="login-invalid <?php echo $invalid ?>">
       <span>
         Nope, that's not it
       </span>
@@ -57,6 +56,6 @@ if (isset($_POST['password'])) {
 
 <script>
   $("#password").on('focus', function() {
-    $("#loginInvalid").removeClass("show");
+    $("#loginInvalid").removeClass("yes");
   });
 </script>
