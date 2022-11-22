@@ -7,9 +7,24 @@
     align-items: center;
     justify-content: center;
 
+    #logo {
+        font-size: $font-size-h2;
+        font-family: $font-family-menu;
+        font-weight: 800;
+        color: white;
+        text-decoration: none;
+    }
+
     form {
         &.no {
             background-color: red;
+        }
+
+        .logo-tagline {
+            color: white;
+            font-weight: 400;
+            font-size: $font-size-overline;
+            margin: 0 0 $spacing-m;
         }
         .login-invalid {
             color: white;
@@ -47,7 +62,7 @@
                 font-weight: 400;
                 background-color: transparent;
                 border: none;
-                width: 200px;
+                flex: 1;
                 color: white;
 
                 &::placeholder {

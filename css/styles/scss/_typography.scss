@@ -51,7 +51,7 @@ mark {
     padding: 0 2px;
 }
 
-p.small{
+p.small {
     font-size: 80%;
 }
 
@@ -63,19 +63,24 @@ overline {
     color: $font-color-body-light;
 }
 
-
-.strikethrough{
+.strikethrough {
     text-decoration: line-through;
 }
 
-
-a{
+a {
     color: $color-accent;
 }
 
-figcaption{
+figcaption {
     font-size: $font-size-overline;
     font-family: $font-family-h5;
     font-weight: 400;
     color: $font-color-body-light;
+}
+
+.redacted:before {
+    content: "[REDACTED]";
+    background-color: rgba($color-warning, 0.5);
+    padding: 0 2px;
+    margin-left: 2px;
 }

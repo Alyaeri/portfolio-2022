@@ -9,22 +9,35 @@
         box-shadow: $box-shadow;
         display: flex;
         width: 100%;
-        flex-direction: column;
+        flex-direction: row;
         position: relative;
         border-radius: $border-radius;
 
-        img {
-            width: 100%;
-            background-color: $bkg-article-feature;
-            height: 250px;
-            border-radius: $border-radius $border-radius 0 0;
+        .picture {
+            min-width: 40%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            border-radius: $border-radius 0 0 $border-radius;
+
+            &.img1 {
+                background-image: url("../images/case-studies/img_cs1-thumb.avif");
+                filter: brightness(95%);
+            }
+
+            &.img2 {
+                background-image: url("../images/case-studies/img_cs2-thumb.avif");
+                filter: brightness(90%);
+            }
+            &.img3 {
+                background-image: url("../images/case-studies/img_cs3-thumb.avif");
+                filter: brightness(90%);
+            }
         }
 
         .chip {
-            
-            position: absolute;
-            top: $spacing-xs;
-            right: $spacing-xs;
+            width: fit-content;
+            margin: $spacing-xs;
 
             font-family: $font-family-body;
             font-size: $font-size-overline;
@@ -32,11 +45,8 @@
             font-weight: 700;
 
             border-radius: $border-radius;
-            color: $font-color-body;
-            background: $color-border;
-
-       
-            
+            color: white;
+            background: $font-color-body;
         }
 
         .wrap {

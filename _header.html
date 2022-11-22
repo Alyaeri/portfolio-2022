@@ -1,28 +1,56 @@
 <script>
 
+  //
+  //
+  // HANDLES PARENT PAGES ON CLICK
+  var anchors = $("#nav a").click(function () {
 
+    $(this).addClass("active")
+    anchors.not(this).removeClass("active")
+  });
+
+  $(function () {
+    var current = location.pathname;
+    $('#nav a').each(function () {
+      var $this = $(this);
+      // if the current path is like this link, make it active
+      if ($this.attr('href').indexOf(current) !== -1) {
+        $this.addClass('active');
+      }
+    })
+  });
+
+  //
+  //
+  // HANDLES PARENT PAGES ON SCROLL
   var addClassOnScroll = function () {
     var windowTop = $(window).scrollTop();
     $('article[id]').each(function (index, elem) {
-        var offsetTop = $(elem).offset().top;
-        var outerHeight = $(this).outerHeight(true);
+      var offsetTop = $(elem).offset().top;
+      var outerHeight = $(this).outerHeight(true);
 
-        if( windowTop > (offsetTop - 50) && windowTop < ( offsetTop + outerHeight)) {
-            var elemId = $(elem).attr('id'); //selects article id
-            $("#nav a.active").removeClass('active');
-            $("#nav a[href='index.html#" + elemId + "']").addClass('active');
-            
-        }
+      if (windowTop > (offsetTop - 150) && windowTop < (offsetTop + outerHeight)) {
+        var elemId = $(elem).attr('id'); //selects article id
+        $("#nav a.active").removeClass('active');
+
+        $("#nav a[href='index.php#" + elemId + "']").addClass('active');
+      }
+
+      if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
+        $("#nav a.active").removeClass('active');
+
+        $("#nav a[href='index.php#experience']").addClass('active');
+      }
     });
   };
 
   $(function () {
     $(window).on('scroll', function () {
-        addClassOnScroll();
+      addClassOnScroll();
     });
   });
-    
-  $("a").on('click', function(event) {  
+
+  $("a").on('click', function (event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
 
@@ -32,9 +60,9 @@
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-        
-      }, 750, function() {
-      
+
+      }, 750, function () {
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
@@ -42,76 +70,60 @@
     } // End if
   });
 
-  
-  var anchors = $("#nav a").click(function() {
+  //
+  //
+  // HANDLES CHILD PAGES
+  function markActiveLink() {
 
-      $(this).addClass("active")
-      anchors.not(this).removeClass("active")
-  });
+    //Look through all the links in the sidebar
+    $("#nav a").filter(function () {
 
-  $(function(){
-    var current = location.pathname;
-    $('#nav a').each(function(){
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(current) !== -1){
-            $this.addClass('active');
-        }
-    })
-  });
+      //Take the current URL and split it into chunks at each slash
+      var currentURL = window.location.toString().split("/");
 
-function markActiveLink() {
+      //return true if the bit after the last slash is the current page name
+      return $(this).attr("href") == currentURL[currentURL.length - 1];
 
-  //Look through all the links in the sidebar
-  $("#nav a").filter(function() {
+      //when the filter function is done, you're left with the links that match.
+    }).addClass("active");
 
-    //Take the current URL and split it into chunks at each slash
-    var currentURL = window.location.toString().split("/");
-
-    //return true if the bit after the last slash is the current page name
-    return $(this).attr("href") == currentURL[currentURL.length-1];
-
-  //when the filter function is done, you're left with the links that match.
-  }).addClass("active");
-
-  //Afterwards, look back through the links. If none of them were marked,
-  //mark your default one.
-  if($("#nav a").hasClass("active") == false) {
-    $("#nav #btn-home").addClass("active");
+    //Afterwards, look back through the links. If none of them were marked,
+    //mark your default one.
+    if ($("#nav a").hasClass("active") == false) {
+      $("#nav #btn-home").addClass("active");
+    }
   }
-}
 
-markActiveLink();
+  markActiveLink();
 
 
-$('#mobile-menu-toggle').on('click', function(){
+  $('#mobile-menu-toggle').on('click', function () {
     $('#nav').toggleClass('open');
     $('#mobile-menu-toggle').toggleClass('open');
-});
+  });
 </script>
 
 <header>
-    <div class="top">
-        <a class="scroll" id="logo" href="index.html">
-          ELLE.</a>
-    </div>
+  <div class="top">
+    <a class="scroll" id="logo" href="index.php">
+      RACHELLE.</a>
+  </div>
 
-   <nav id="nav">
-        <a class="scroll" href="index.php#home" id="btn-home">Home</a>
-        
-        <a class="scroll" href="index.php#case-studies" id="btn-case-studies">Case studies</a>
-        <a class="menu-sub" href="care-to-compare.html" id="btn-cs1">Care to compare</a>
-        <a class="menu-sub" href="the-ultimate-design-system.html" id="btn-cs2">The ultimate design system</a>
-        <a class="menu-sub" href="a-more-convenient-login.html" id="btn-cs3">A more convenient login</a>
-        <a class="scroll" href="index.php#about" id="btn-about">About</a>
-        <a class="scroll" href="index.php#experience" id="btn-experience">Experience</a>
-   </nav>
+  <nav id="nav">
+    <a class="scroll" href="index.php#home" id="btn-home">Home</a>
 
-   <div id="mobile-menu-toggle" class="" onClick="toggleMenu()">
+    <a class="scroll" href="index.php#case-studies" id="btn-case-studies">Case studies</a>
+    <a class="menu-sub" href="care-to-compare.html" id="btn-cs1">Care to compare</a>
+    <a class="menu-sub" href="the-ultimate-design-system.html" id="btn-cs2">The ultimate design system</a>
+    <a class="menu-sub" href="a-more-convenient-login.html" id="btn-cs3">A more convenient login</a>
+    <a class="scroll" href="index.php#about" id="btn-about">About</a>
+    <a class="scroll" href="index.php#experience" id="btn-experience">Experience</a>
+  </nav>
+
+  <div id="mobile-menu-toggle" class="" onClick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-   </div>
+  </div>
 </header>
-

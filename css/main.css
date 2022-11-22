@@ -78,6 +78,13 @@ figcaption {
   color: #767676;
 }
 
+.redacted:before {
+  content: "[REDACTED]";
+  background-color: rgba(255, 152, 0, 0.5);
+  padding: 0 2px;
+  margin-left: 2px;
+}
+
 body {
   margin: 0;
   display: -webkit-box;
@@ -134,8 +141,23 @@ body {
           justify-content: center;
 }
 
+.login-page #logo {
+  font-size: calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
+  font-family: "Montserrat", serif;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+}
+
 .login-page form.no {
   background-color: red;
+}
+
+.login-page form .logo-tagline {
+  color: white;
+  font-weight: 400;
+  font-size: calc(calc(1rem / 1.15) / 1.15);
+  margin: 0 0 2rem;
 }
 
 .login-page form .login-invalid {
@@ -156,7 +178,7 @@ body {
 
 .login-page form .input-wrap {
   background-color: rgba(0, 0, 0, 0.75);
-  border-radius: 3px;
+  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,7 +200,9 @@ body {
   font-weight: 400;
   background-color: transparent;
   border: none;
-  width: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   color: white;
 }
 
@@ -218,7 +242,7 @@ body {
   width: 40px;
   background-color: white;
   color: black;
-  border-radius: 3px;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
 }
@@ -242,32 +266,52 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: relative;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
-.grid .case-study img {
-  width: 100%;
-  background-color: #1e1e1e;
-  height: 250px;
-  border-radius: 3px 3px 0 0;
+.grid .case-study .picture {
+  min-width: 40%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px 0 0 4px;
+}
+
+.grid .case-study .picture.img1 {
+  background-image: url("../images/case-studies/img_cs1-thumb.avif");
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+.grid .case-study .picture.img2 {
+  background-image: url("../images/case-studies/img_cs2-thumb.avif");
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.grid .case-study .picture.img3 {
+  background-image: url("../images/case-studies/img_cs3-thumb.avif");
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 
 .grid .case-study .chip {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0.5rem;
   font-family: "Open Sans", sans-serif;
   font-size: calc(calc(1rem / 1.15) / 1.15);
   padding: 0.35rem 0.75rem;
   font-weight: 700;
-  border-radius: 3px;
-  color: #252b33;
-  background: #ebebeb;
+  border-radius: 4px;
+  color: white;
+  background: #252b33;
 }
 
 .grid .case-study .wrap {
@@ -332,7 +376,7 @@ body {
 }
 
 .btn {
-  border-radius: 3px;
+  border-radius: 4px;
   font-family: "Open Sans", sans-serif;
   font-size: calc(calc(1rem / 1.15) / 1.15);
   padding: 0.75rem 1.5rem;
@@ -560,12 +604,17 @@ article.regular.regular-1 {
 }
 
 article.regular.regular-2 {
-  background-color: #eeeeee;
+  background-color: #dfdfdf;
 }
 
 article.regular img {
   width: 100%;
-  border-radius: 3px;
+  border-radius: 8px;
+}
+
+article.regular img.inset {
+  width: calc(100% + 1rem + 1rem);
+  margin: -1rem -1rem;
 }
 
 article.tools {
@@ -613,7 +662,7 @@ article .article-inner {
 
 article .article-inner.narrow,
 article .article-inner .narrow {
-  max-width: 600px;
+  max-width: 630px;
   margin: 0 auto;
 }
 
@@ -629,14 +678,15 @@ article .article-inner .layout-insight {
   border-left: 4px solid #6588e6;
   -webkit-box-shadow: 0 0 20px #dfdfdf;
           box-shadow: 0 0 20px #dfdfdf;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 article .article-inner .layout-insight h4 {
   margin: 1rem 0 0.5rem 0;
 }
 
-article .article-inner .layout-insight p, article .article-inner .layout-insight ul {
+article .article-inner .layout-insight p,
+article .article-inner .layout-insight ul {
   font-size: 80%;
 }
 
@@ -715,7 +765,7 @@ blockquote {
 .quote-wrap .quote-person {
   width: 40px;
   height: 40px;
-  border-radius: 3px;
+  border-radius: 4px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -723,7 +773,7 @@ blockquote {
 .quote-wrap blockquote {
   margin-left: 1rem;
   background-color: #ffffff;
-  border-radius: 3px;
+  border-radius: 4px;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -751,12 +801,50 @@ blockquote {
   max-width: 50%;
 }
 
+.border {
+  border: 2px solid #252b33;
+  border-radius: 8px;
+}
+
 figure {
   margin: 0;
 }
 
 img {
   image-rendering: auto;
+}
+
+.atomic-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.atomic-wrap figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.atomic-wrap figure img {
+  margin: auto;
+}
+
+.atomic-wrap figure figcaption {
+  margin-top: auto;
+  padding-top: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 header {
@@ -789,12 +877,12 @@ header #nav a {
   position: relative;
   float: left;
   clear: both;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: calc(0.5rem / 2) 0.5rem;
 }
 
 header #nav a.active {
-  background-color: #eeeeee;
+  background-color: #dfdfdf;
   font-weight: 600;
   color: #252b33;
 }
@@ -810,7 +898,7 @@ header #nav a.menu-sub {
   }
   header {
     height: 4rem;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #dfdfdf;
     z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -866,7 +954,7 @@ header #nav a.menu-sub {
     -webkit-box-align: left;
         -ms-flex-align: left;
             align-items: left;
-    border-right: 1px solid #ebebeb;
+    border-right: 1px solid #dfdfdf;
     font-size: calc(1rem / 1.15);
   }
   header #nav {
@@ -991,7 +1079,7 @@ footer p {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 1rem 1rem;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-bottom: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1032,9 +1120,9 @@ footer p {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  color: #252b33;
-  background: #ebebeb;
-  border-radius: 3px;
+  color: white;
+  background: #252b33;
+  border-radius: 4px;
 }
 
 .timeline .timeline-section h4,

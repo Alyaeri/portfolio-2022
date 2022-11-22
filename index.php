@@ -18,29 +18,23 @@ if (!isset($_SESSION['is-user-logged'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- FONT IMPORTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Elle Patman | Senior UX / UI Designer</title>
+    <title>Rachelle Patman | Senior UX / UI Designer</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
         $(document).ready(function() {
             $("#header").load("_header.html");
             $("#footer").load("_footer.html");
-
-            setTimeout(
-                function() {
-                    $("#preloader").addClass("preloaded");
-                }, 1500);
-
-            setTimeout(
-                function() {
-                    $("#preloader").remove();
-                }, 2500);
         });
     </script>
 
@@ -48,23 +42,19 @@ if (!isset($_SESSION['is-user-logged'])) {
 
 <body>
 
-    <div id="preloader">
-        <div class="loader_line"></div>
-    </div>
-
     <div id="header"></div>
 
     <main>
         <article id="home" class="home feature">
-            <div class="article-inner narrow">
-                <h1>Hi, I'm Elle!</h1>
+            <div class="article-inner narrow" style="margin:auto;">
+                <h1>Hi, I'm Rachelle!</h1>
                 <h2>
-                    A senior User Experience and User Interface Designer
+                    A Senior User Experience and User Interface Designer
                 </h2>
                 <hr class="line-header">
 
                 <p>
-                    Working hybridly from Brisbane, Australia. I have a background in User Experience and User Interface
+                    Working remotely from Melbourne, Australia. I have a background in User Experience and User Interface
                     design, and
                     have been shaping the future of products throughout my career.
                 </p>
@@ -89,8 +79,11 @@ if (!isset($_SESSION['is-user-logged'])) {
 
                 <div class="grid">
                     <div class="case-study">
-                        <img src="images/hero.jpg" alt="Thumbnail of new price page design">
-                        <div class="chip">OCT 2021</div>
+                        <div class="picture img1">
+                            <div class="chip">OCT 2021</div>
+                        </div>
+
+
                         <div class="wrap">
                             <h4>Care to compare</h4>
                             <p class="small">Enhancing the process of comparing benefits across insurance policies</p>
@@ -99,8 +92,10 @@ if (!isset($_SESSION['is-user-logged'])) {
                     </div>
 
                     <div class="case-study">
-                        <img src="images/hero.jpg" alt="Thumbnail of design system menu">
-                        <div class="chip">FEB 2022</div>
+                        <div class="picture img2">
+                            <div class="chip">FEB 2022</div>
+                        </div>
+
                         <div class="wrap">
                             <h4>The ultimate design system</h4>
                             <p class="small">Creating a reusable and extensible design system to facilitate rapid
@@ -111,8 +106,10 @@ if (!isset($_SESSION['is-user-logged'])) {
                     </div>
 
                     <div class="case-study">
-                        <img src="images/hero.jpg" alt="Thumbnail of sign in page design">
-                        <div class="chip">APR 2019</div>
+                        <div class="picture img3">
+                            <div class="chip">APR 2019</div>
+                        </div>
+
                         <div class="wrap">
                             <h4>A more convenient login</h4>
                             <p class="small">Improving the security of our online self service platform</p>
@@ -128,14 +125,14 @@ if (!isset($_SESSION['is-user-logged'])) {
         <article id="about" class="regular regular-1">
             <div class="article-inner narrow">
 
-                <h2>Hi, i'm Elle </h2>
+                <h2>Hi, i'm Rachelle </h2>
 
                 <p>
-                    I'm a Brisbane based senior User Experience and User Interface designer with a passion for building
+                    I'm a Melbourne based Senior User Experience and User Interface Designer with a passion for building
                     design systems with a human touch.
                 </p>
                 <p>
-                    I've bitten by the travel bug and discovered a passion for architecture and photography.
+                    I've been bitten by the travel bug and discovered a passion for architecture and photography.
                 </p>
                 <p>
                     I find myself drawn to unique shapes and lines, looking for patterns in all things. You'll find me
@@ -209,9 +206,8 @@ if (!isset($_SESSION['is-user-logged'])) {
 
         </article>
 
+
         <div id="footer"></div>
-
-
     </main>
 </body>
 
