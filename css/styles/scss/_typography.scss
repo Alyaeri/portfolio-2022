@@ -42,8 +42,9 @@ body {
     color: $font-color-body;
 
     p {
-        margin: $spacing-s 0;
+        margin: $spacing-s 0 $spacing-m 0;
     }
+    
 }
 
 mark {

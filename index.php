@@ -126,22 +126,28 @@ if (!isset($_SESSION['is-user-logged'])) {
             <div class="article-inner narrow">
 
                 <h2>Hi, i'm Rachelle </h2>
-
                 <p>
-                    I'm a Melbourne based Senior User Experience and User Interface Designer with a passion for building
-                    design systems with a human touch.
+                    A Melbourne based Senior User Experience and User Interface Designer with over 10 years' experience in the industry.
                 </p>
                 <p>
-                    I've been bitten by the travel bug and discovered a passion for architecture and photography.
+                    I've worked with start-ups right through to global industry leaders to improve the user experience across their products and platforms. With a passion for reusable and accessible design, you'll find me championing inclusive design across the business.
                 </p>
                 <p>
-                    I find myself drawn to unique shapes and lines, looking for patterns in all things. You'll find me
-                    snapping pics of the ceiling, often oblivious to the fact that i'm about to stumble into an innocent
-                    passerby.
+                    I guide junior and mid-level designers on thoughtful design with an emphasis on the human centered design process, and have a passion for building design systems with a human touch.
                 </p>
                 <p>
-                    You can find me day dreaming about my next travel destination, or buried deep in a book.
+                    I'm also a big believer in taking care of yourself. Humans don't empathize as well when we're stressed, and burnout is real.
+                <ul>
+                    <li>✈️ Travel somewhere </li>
+                    <li>📵 Delete your social media</li>
+                    <li>☕ Cozy up with a good book + a warm tea</li>
+                    <li>🧠 Do whatever it takes.</li>
+                </ul>
                 </p>
+                <p>
+                    Take care of yourself. Take care of each other.
+                </p>
+                <br>
                 <p>
                     Chao for now! 👋
                 </p>

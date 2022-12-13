@@ -43,7 +43,7 @@ body {
 }
 
 body p {
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 mark {
@@ -673,7 +673,7 @@ article .article-inner h2 {
 
 article .article-inner .layout-insight {
   background-color: white;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   margin-top: 1rem;
   border-left: 4px solid #6588e6;
   -webkit-box-shadow: 0 0 20px #dfdfdf;
