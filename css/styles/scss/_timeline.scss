@@ -14,10 +14,16 @@
         h4,
         p {
             margin: 0;
-            flex: 2;
-
             font-family: $font-family-body;
             padding: 0 0 0 $spacing-s;
+        }
+
+        h4 {
+            flex: 2;
+        }
+
+        p {
+            flex: 1;
         }
 
         .chip,
@@ -54,12 +60,11 @@
 
     li {
         .count {
-            align-self:flex-start;
+            align-self: flex-start;
         }
         div {
-
-            h4{
-                margin: 0.2rem 0 $spacing-xs 0 ;
+            h4 {
+                margin: 0.2rem 0 $spacing-xs 0;
             }
             p {
                 text-align: left;

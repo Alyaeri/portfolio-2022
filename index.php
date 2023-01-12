@@ -54,9 +54,7 @@ if (!isset($_SESSION['is-user-logged'])) {
                 <hr class="line-header">
 
                 <p>
-                    Working remotely from Melbourne, Australia. I have a background in User Experience and User Interface
-                    design, and
-                    have been shaping the future of products throughout my career.
+                    Working remotely from Melbourne, Australia, I have been helping shape the future of globally recognised products throughout my career.
                 </p>
 
             </div>
@@ -92,7 +90,7 @@ if (!isset($_SESSION['is-user-logged'])) {
                     </div>
 
                     <div class="case-study">
-                        <div class="picture img2">
+                        <div class="picture img3">
                             <div class="chip">FEB 2022</div>
                         </div>
 
@@ -106,7 +104,7 @@ if (!isset($_SESSION['is-user-logged'])) {
                     </div>
 
                     <div class="case-study">
-                        <div class="picture img3">
+                        <div class="picture img2">
                             <div class="chip">APR 2019</div>
                         </div>
 
@@ -126,28 +124,19 @@ if (!isset($_SESSION['is-user-logged'])) {
             <div class="article-inner narrow">
 
                 <h2>Hi, i'm Rachelle </h2>
+
                 <p>
-                    A Melbourne based Senior User Experience and User Interface Designer with over 10 years' experience in the industry.
+                    After a lifetime in Queensland I've just relocated to Melbourne to start the next chapter of my life. 
                 </p>
                 <p>
-                    I've worked with start-ups right through to global industry leaders to improve the user experience across their products and platforms. With a passion for reusable and accessible design, you'll find me championing inclusive design across the business.
+                I have over over 10 years' experience in the industry, and I'm currently on the lookout for my next project in a company I can see myself being a part of for the longterm.
+                </p>
+                <p>
+                    I've worked with start-ups right through to global industry leaders on their journey to improve the user experience across their products and platforms. With a passion for reusable and accessible design, you'll find me championing inclusive design across the business.
                 </p>
                 <p>
                     I guide junior and mid-level designers on thoughtful design with an emphasis on the human centered design process, and have a passion for building design systems with a human touch.
                 </p>
-                <p>
-                    I'm also a big believer in taking care of yourself. Humans don't empathize as well when we're stressed, and burnout is real.
-                <ul>
-                    <li>✈️ Travel somewhere </li>
-                    <li>📵 Delete your social media</li>
-                    <li>☕ Cozy up with a good book + a warm tea</li>
-                    <li>🧠 Do whatever it takes.</li>
-                </ul>
-                </p>
-                <p>
-                    Take care of yourself. Take care of each other.
-                </p>
-                <br>
                 <p>
                     Chao for now! 👋
                 </p>
@@ -198,7 +187,7 @@ if (!isset($_SESSION['is-user-logged'])) {
 
                     <div class="timeline-section">
                         <div class="chip">2012 - 2015</div>
-                        <h4>Bachelor of Multimedia Design</h4>
+                        <h4>Bachelor of Multimedia Design (Interaction Design)</h4>
                         <p>The University of Queensland</p>
                     </div>
 

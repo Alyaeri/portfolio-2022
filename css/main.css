@@ -666,6 +666,10 @@ article .article-inner .narrow {
   margin: 0 auto;
 }
 
+article .article-inner.logos-only img {
+  width: auto;
+}
+
 article .article-inner h1,
 article .article-inner h2 {
   text-transform: uppercase;
@@ -1095,11 +1099,26 @@ footer p {
 .process li h4,
 .process li p {
   margin: 0;
+  font-family: "Open Sans", sans-serif;
+  padding: 0 0 0 1rem;
+}
+
+.timeline .timeline-section h4,
+.timeline li h4,
+.process .timeline-section h4,
+.process li h4 {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  font-family: "Open Sans", sans-serif;
-  padding: 0 0 0 1rem;
+}
+
+.timeline .timeline-section p,
+.timeline li p,
+.process .timeline-section p,
+.process li p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .timeline .timeline-section .chip,

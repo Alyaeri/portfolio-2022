@@ -225,9 +225,15 @@ article {
         &.narrow,
         .narrow {
             max-width: 630px;
-
             margin: 0 auto;
         }
+
+        &.logos-only{
+            img{
+                width: auto;
+            }
+        }
+        
         h1,
         h2 {
             text-transform: uppercase;
