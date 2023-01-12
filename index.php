@@ -129,7 +129,7 @@ if (!isset($_SESSION['is-user-logged'])) {
                     After a lifetime in Queensland I've just relocated to Melbourne to start the next chapter of my life. 
                 </p>
                 <p>
-                I have over over 10 years' experience in the industry, and I'm currently on the lookout for my next project in a company I can see myself being a part of for the longterm.
+                I have over 10 years' experience in the industry, and I'm currently on the lookout for my next project in a company I can see myself being a part of for the longterm.
                 </p>
                 <p>
                     I've worked with start-ups right through to global industry leaders on their journey to improve the user experience across their products and platforms. With a passion for reusable and accessible design, you'll find me championing inclusive design across the business.
@@ -138,7 +138,7 @@ if (!isset($_SESSION['is-user-logged'])) {
                     I guide junior and mid-level designers on thoughtful design with an emphasis on the human centered design process, and have a passion for building design systems with a human touch.
                 </p>
                 <p>
-                    Chao for now! 👋
+                Ciao for now! 👋
                 </p>
 
             </div>
