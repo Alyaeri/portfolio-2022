@@ -33,13 +33,13 @@
         var elemId = $(elem).attr('id'); //selects article id
         $("#nav a.active").removeClass('active');
 
-        $("#nav a[href='index.php#" + elemId + "']").addClass('active');
+        $("#nav a[href='index.html#" + elemId + "']").addClass('active');
       }
 
       if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
         $("#nav a.active").removeClass('active');
 
-        $("#nav a[href='index.php#experience']").addClass('active');
+        $("#nav a[href='index.html#experience']").addClass('active');
       }
     });
   };
@@ -105,19 +105,19 @@
 
 <header>
   <div class="top">
-    <a class="scroll" id="logo" href="index.php">
+    <a class="scroll" id="logo" href="index.html">
       RACHELLE.</a>
   </div>
 
   <nav id="nav">
-    <a class="scroll" href="index.php#home" id="btn-home">Home</a>
+    <a class="scroll" href="index.html#home" id="btn-home">Home</a>
 
-    <a class="scroll" href="index.php#case-studies" id="btn-case-studies">Case studies</a>
+    <a class="scroll" href="index.html#case-studies" id="btn-case-studies">Case studies</a>
     <a class="menu-sub" href="care-to-compare.html" id="btn-cs1">Care to compare</a>
     <a class="menu-sub" href="the-ultimate-design-system.html" id="btn-cs2">The ultimate design system</a>
     <a class="menu-sub" href="a-more-convenient-login.html" id="btn-cs3">A more convenient login</a>
-    <a class="scroll" href="index.php#about" id="btn-about">About</a>
-    <a class="scroll" href="index.php#experience" id="btn-experience">Experience</a>
+    <a class="scroll" href="index.html#about" id="btn-about">About</a>
+    <a class="scroll" href="index.html#experience" id="btn-experience">Experience</a>
   </nav>
 
   <div id="mobile-menu-toggle" class="" onClick="toggleMenu()">

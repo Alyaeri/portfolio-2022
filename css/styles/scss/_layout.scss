@@ -7,28 +7,3 @@ body {
     flex-shrink: 1;
 }
 
-// ipad and lower
-@media screen and (max-width: 1020px) {
-
-}
-// higher than ipad
-
-@media screen and (min-width: 1021px) {
-    header, main{
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        min-height: 100vh;
-    }
-    
-    main {
-        background-color: $bkg-body;
-        flex: 2;
-        margin-left: $layout-cols-header; 
-        width: $layout-cols-body;
-    }
-}
-
-
-
-

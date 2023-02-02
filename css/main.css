@@ -1,5 +1,5 @@
 h1 {
-  font-size: calc(calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
+  font-size: calc(calc(calc(calc(1.2rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   color: #252b33;
   text-transform: uppercase;
@@ -9,27 +9,27 @@ h1 {
 }
 
 h2 {
-  font-size: calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
+  font-size: calc(calc(calc(1.2rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   color: #252b33;
 }
 
 h3 {
-  font-size: calc(calc(1rem * 1.15) * 1.15 * 1.15);
+  font-size: calc(calc(1.2rem * 1.15) * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   color: #252b33;
   margin: 4rem 0 1rem 0;
 }
 
 h4 {
-  font-size: calc(1rem * 1.15);
+  font-size: calc(1.2rem * 1.15);
   font-family: "Montserrat", serif;
   color: #252b33;
   margin-bottom: 0.5rem;
 }
 
 h5 {
-  font-size: calc(1rem * 1.15);
+  font-size: calc(1.2rem * 1.15);
   font-family: "Montserrat", serif;
   font-weight: 700;
   color: red;
@@ -37,7 +37,7 @@ h5 {
 }
 
 body {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
   color: #252b33;
 }
@@ -52,11 +52,11 @@ mark {
 }
 
 p.small {
-  font-size: 80%;
+  font-size: 85%;
 }
 
 overline {
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   text-transform: uppercase;
   font-family: "Montserrat", serif;
   font-weight: 600;
@@ -72,7 +72,7 @@ a {
 }
 
 figcaption {
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   font-family: "Montserrat", serif;
   font-weight: 400;
   color: #767676;
@@ -101,29 +101,6 @@ body {
       flex-shrink: 1;
 }
 
-@media screen and (min-width: 1021px) {
-  header, main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    min-height: 100vh;
-  }
-  main {
-    background-color: #f8f8f8;
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    margin-left: calc((100vw / 12) * 3);
-    width: calc((100vw / 12) * 9);
-  }
-}
-
 .login-page {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("/images/login.png");
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/login.png");
@@ -142,7 +119,7 @@ body {
 }
 
 .login-page #logo {
-  font-size: calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
+  font-size: calc(calc(calc(1.2rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   font-weight: 800;
   color: white;
@@ -156,13 +133,13 @@ body {
 .login-page form .logo-tagline {
   color: white;
   font-weight: 400;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   margin: 0 0 2rem;
 }
 
 .login-page form .login-invalid {
   color: white;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   font-weight: 400;
   margin: 0.25rem 0;
   min-height: 24px;
@@ -192,7 +169,7 @@ body {
 .login-page form .input-wrap input,
 .login-page form .input-wrap button {
   font-family: "Open Sans", sans-serif;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   height: 40px;
 }
 
@@ -306,7 +283,7 @@ body {
   width: fit-content;
   margin: 0.5rem;
   font-family: "Open Sans", sans-serif;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   padding: 0.35rem 0.75rem;
   font-weight: 700;
   border-radius: 4px;
@@ -378,7 +355,7 @@ body {
 .btn {
   border-radius: 4px;
   font-family: "Open Sans", sans-serif;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   padding: 0.75rem 1.5rem;
   font-weight: 800;
   overflow: hidden;
@@ -419,7 +396,7 @@ body {
 
 @media screen and (max-width: 1020px) {
   article {
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 2rem 2rem 2rem;
   }
   article .mouse {
     display: none;
@@ -446,6 +423,21 @@ body {
   article .data-images .row div img {
     height: 30px;
     padding: 0.5rem 0;
+    width: auto;
+  }
+  article .article-inner {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  article .article-inner.narrow,
+  article .article-inner .narrow {
+    max-width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 2rem;
+    margin: 0 auto;
+  }
+  article .article-inner.logos-only img {
     width: auto;
   }
 }
@@ -535,7 +527,6 @@ article.home .mouse .wheel, article.feature .mouse .wheel, article.cs1 .mouse .w
 }
 
 article.home {
-  min-height: calc(100vh - 4rem - 8rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,6 +537,12 @@ article.home {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 1021px) {
+  article.home {
+    min-height: calc(100vh - 4rem - 8rem);
+  }
 }
 
 article.home h1,
@@ -691,7 +688,7 @@ article .article-inner .layout-insight h4 {
 
 article .article-inner .layout-insight p,
 article .article-inner .layout-insight ul {
-  font-size: 80%;
+  font-size: 85%;
 }
 
 article #container {
@@ -752,7 +749,7 @@ article .anychart-credits {
 
 blockquote {
   border-left: 4px solid #6588e6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
   margin: 0;
@@ -783,7 +780,7 @@ blockquote {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem 1rem;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
 }
 
 .quote-wrap blockquote:after {
@@ -856,7 +853,7 @@ header {
 }
 
 header .top #logo {
-  font-size: calc(calc(calc(1rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15 * 1.15);
+  font-size: calc(calc(calc(1.2rem * 1.15) * 1.15 * 1.15) * 1.15 * 1.15);
   font-family: "Montserrat", serif;
   font-weight: 800;
   color: #252b33;
@@ -921,6 +918,9 @@ header #nav a.menu-sub {
   header .bottom {
     display: none;
   }
+  main {
+    width: 100%;
+  }
   #mobile-menu-toggle {
     display: block;
     z-index: 1;
@@ -944,11 +944,52 @@ header #nav a.menu-sub {
   }
 }
 
-@media screen and (min-width: 1021px) {
+@media screen and (min-width: 1021px) and (max-width: 1440px) {
   header {
-    position: fixed;
+    width: calc((100vw / 12) * 4);
+    max-width: calc((100vw / 12) * 4);
+  }
+  main {
+    background-color: #f8f8f8;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    margin-left: calc((100vw / 12) * 4);
+    width: calc((100vw / 12) * 8);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
     width: calc((100vw / 12) * 3);
     max-width: calc((100vw / 12) * 3);
+  }
+  main {
+    background-color: #f8f8f8;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    margin-left: calc((100vw / 12) * 3);
+    width: calc((100vw / 12) * 9);
+  }
+}
+
+@media screen and (min-width: 1021px) {
+  header,
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    min-height: 100vh;
+  }
+  header {
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -959,7 +1000,7 @@ header #nav a.menu-sub {
         -ms-flex-align: left;
             align-items: left;
     border-right: 1px solid #dfdfdf;
-    font-size: calc(1rem / 1.15);
+    font-size: calc(1.2rem / 1.15);
   }
   header #nav {
     padding: 2rem 4rem;
@@ -1065,7 +1106,7 @@ footer {
 footer p {
   color: white;
   margin: 0;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
 }
 
 .timeline .timeline-section,
@@ -1130,7 +1171,7 @@ footer p {
 .process li .chip,
 .process li .count {
   font-family: "Open Sans", sans-serif;
-  font-size: calc(calc(1rem / 1.15) / 1.15);
+  font-size: calc(calc(1.2rem / 1.15) / 1.15);
   padding: 0.35rem 0.75rem;
   font-weight: 700;
   width: -webkit-fit-content;
@@ -1150,7 +1191,7 @@ footer p {
 .process li h4 {
   color: #252b33;
   font-weight: 700;
-  font-size: calc(1rem / 1.15);
+  font-size: calc(1.2rem / 1.15);
 }
 
 .timeline .timeline-section p,
@@ -1159,7 +1200,7 @@ footer p {
 .process li p {
   text-align: right;
   color: #767676;
-  font-size: calc(1rem / 1.15);
+  font-size: calc(1.2rem / 1.15);
 }
 
 .process {
@@ -1181,153 +1222,18 @@ footer p {
   color: #252b33;
 }
 
-#preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 99999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#preloader:before, #preloader:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("/images/login.png");
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/login.png");
-  background-size: cover;
-  -webkit-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
-}
-
-#preloader:before {
-  left: 0;
-}
-
-#preloader:after {
-  right: 0;
-}
-
-#preloader .loader_line {
-  margin: auto;
-  width: 1px;
-  height: 250px;
-  position: relative;
-  overflow: hidden;
-  -webkit-transition: all .8s ease 0s;
-  transition: all .8s ease 0s;
-}
-
-.loader_line:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 1px;
-  height: 0%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background-color: #fff;
-  -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
-  animation: lineheight 1000ms ease-in-out 0s forwards;
-}
-
-.loader_line:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #999;
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  -webkit-animation: lineround 1200ms linear 0s infinite;
-  animation: lineround 1200ms linear 0s infinite;
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
-}
-
-@-webkit-keyframes lineheight {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@keyframes lineheight {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@-webkit-keyframes lineround {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(200%);
-    transform: translateY(200%);
-  }
-}
-
-@keyframes lineround {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(200%);
-    transform: translateY(200%);
-  }
-}
-
-.preloaded .loader_line:after {
-  opacity: 0;
-}
-
-.preloaded .loader_line {
-  opacity: 0;
-  height: 100% !important;
-}
-
-.preloaded:before, .preloaded:after {
-  -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
-  animation: preloadedzero 300ms ease-in-out 500ms forwards;
-}
-
-@-webkit-keyframes preloadedzero {
-  0% {
-    width: 50%;
-  }
-  100% {
-    width: 0%;
-  }
-}
-
-@keyframes preloadedzero {
-  0% {
-    width: 50%;
-  }
-  100% {
-    width: 0%;
-  }
-}
-
 html {
-  font-size: 120%;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 1020px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1021px) {
+  html {
+    font-size: 100%;
+  }
 }

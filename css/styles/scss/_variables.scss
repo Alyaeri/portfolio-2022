@@ -8,20 +8,23 @@ $color-warning: #ff9800;
 $layout-cols-header: calc((100vw / 12) * 3);
 $layout-cols-body: calc((100vw / 12) * 9);
 
+$layout-cols-header-sm: calc((100vw / 12) * 4);
+$layout-cols-body-sm: calc((100vw / 12) * 8);
+
 $bkg-article-feature: #1e1e1e;
 $bkg-article-regular-1: #ffffff;
 $bkg-article-regular-2: #dfdfdf;
 
 // TYPOGRAPHY
 $scale: 1.15;
-$font-size-body: 1rem;
+$font-size-body: 1.2rem;
 $font-size-menu: calc(#{$font-size-body} / #{$scale});
 $font-size-overline: calc(#{$font-size-menu} / #{$scale});
 
 $font-size-h5: calc(#{$font-size-body} * #{$scale});
 $font-size-h4: calc(#{$font-size-body} * #{$scale});
 $font-size-h3: calc(#{$font-size-h4} * #{$scale} * #{$scale});
-$font-size-h2: calc(#{$font-size-h3} * #{$scale} * #{$scale} * #{$scale});
+$font-size-h2: calc(#{$font-size-h3} * #{$scale} * #{$scale});
 $font-size-h1: calc(#{$font-size-h2} * #{$scale} * #{$scale} * #{$scale});
 
 $font-family-h1: "Montserrat", serif;
